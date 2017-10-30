@@ -1,4 +1,6 @@
+import { Waypoints } from './noframework.waypoints.min';
 import { User } from './user';
+//import { Waypoints } from './waypoints';
 
 console.log('Welcome !');
 
