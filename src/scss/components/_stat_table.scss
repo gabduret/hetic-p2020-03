@@ -1,12 +1,18 @@
-table {
+* {
   background: $black;
+}
+
+table {
   color: $white;
   font-size: $text-2;
-  //enlever ça a la fin
+  margin-top: $margin-top-1;
+  margin-left: $margin-left-1;
+  margin-right: $margin-left-1;
   
   //pour toutes les lignes
   tr {
     border-bottom: 1px solid $white;
+    padding-top: $margin-top-5;
     
     td:nth-of-type(1) {
       font-size: $subtitle-1;
@@ -23,7 +29,7 @@ table {
       ul {
         display: flex;
         flex-direction: row;
-        justify-content: flex-start;
+        justify-content: flex-end;
         align-items: flex-start;
       
         li:nth-of-type(1) {

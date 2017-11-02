@@ -20,6 +20,23 @@ $black-2: #202020;
 $main-color: #156DF2;
 $main-color-hover: #6aaaff;
 
+// Marging-top et padding
+$margin-top-1: 240px; //élément le plus bas section/élément le plus haut d'une autre 
+$margin-top-2: 140px; //espace entre bas du texte et bouton
+$margin-top-3: 78px; //espace entre le haut d'une image et le haut du texte
+$margin-top-4: 50px; //espace entre les points de navigation
+$margin-top-5: 30px; //espace entre titre et texte / filet et texte
+$margin-top-6: 15px; //espace entre titre et texte
+
+// Margin-left
+$margin-left-1: 10%; //distance bordure gauche (idem bordure droite)
+$margin-left-2: 168px; // espace entre image et texte
+$margin-left-3: 140px; //espace entre image echo et caractéristique
+$margin-left-4: 60px; //espace entre logo et 1er item menu
+$margin-left-5: 40px; //espace entre 2 items menu
+$margin-left-6: 20px; //espace entre les 2 boutons du menu
+$margin-left-7: 10px; //espace entre les points caractéristiques et texte
+
 // Box shadow
 $box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.05);
 $box-shadow-action: 0px 0px 20px 0px rgba(0, 0, 0, 0.14);
