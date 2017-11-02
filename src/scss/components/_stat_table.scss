@@ -1,0 +1,41 @@
+table {
+  background: $black;
+  color: $white;
+  font-size: $text-2;
+  //enlever ça a la fin
+  
+  //pour toutes les lignes
+  tr {
+    border-bottom: 1px solid $white;
+    
+    td:nth-of-type(1) {
+      font-size: $subtitle-1;
+      color: $main-color;
+      //rajouter la graisse ici
+    }
+  }
+  
+  //la première ligne à un css spécifique
+  tr:nth-of-type(1) {
+    
+    td:nth-of-type(2) {
+      
+      ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+      
+        li:nth-of-type(1) {
+          font-size: $subtitle-2;
+          width: 20%;
+        }
+        
+        li:nth-of-type(2){
+          width: 80%;
+        }
+      }
+    }
+    
+  }
+}
