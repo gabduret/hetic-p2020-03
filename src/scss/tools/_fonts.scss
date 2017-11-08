@@ -1,4 +1,64 @@
 @font-face {
- font-family: "Roboto";
- src: url("../fonts/Roboto-Regular.ttf") format("truetype");
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Regular.ttf") format("truetype");
+}
+
+/* Amazon Ember */
+
+/* Regular normal */
+@font-face {
+  font-family:'Ember';
+  src:url(../fonts/Amazon-Regular.ttf);
+  font-weight:400;
+  font-style:normal;
+}
+
+/* Light normal */
+@font-face {
+  font-family:'Ember';
+  src:url(../fonts/Amazon-Ember-Light.ttf);
+  font-weight:300;
+  font-style:normal;
+}
+
+/* Bold normal */
+@font-face {
+  font-family:'Ember';
+  src:url(../fonts/Amazon-Ember-Bold.ttf);
+  font-weight:700;
+  font-style:normal;
+}
+
+/* Avenir Next */
+
+/* Regular normal */
+@font-face {
+  font-family:'Avenir';
+  src:url(../fonts/AvenirNext-Regular.ttf);
+  font-weight:400;
+  font-style:normal;
+}
+
+/* Regular italic */
+@font-face {
+  font-family:'Avenir';
+  src:url(../fonts/AvenirNext-Italic.ttf);
+  font-weight:300;
+  font-style:italic;
+}
+
+/* Medium normal */
+@font-face {
+  font-family:'Avenir';
+  src:url(../fonts/AvenirNext-Medium.ttf);
+  font-weight:600;
+  font-style:normal;
+}
+
+/* Bold normal */
+@font-face {
+  font-family:'Avenir';
+  src:url(../fonts/avenir-next-bold.ttf);
+  font-weight:700;
+  font-style:normal;
 }
