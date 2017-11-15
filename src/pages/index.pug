@@ -1,8 +1,13 @@
 include ../partials/header.pug
 
-<h1>Hello world</h1>
+<div id="fixedHeader" class="test">
+  <div></div>
+  <h1>Hello world</h1>
+</div>
 
-<div>
+
+<div id="direction"></div>
+<div class="first-element">
   <a href="page2.html">See page 2</a>
 </div>
 
@@ -10,15 +15,30 @@ include ../partials/header.pug
   <a href="stat_table.html">See page stat table</a>
 </div>
 
+<section class="navigation">
+  <div class="navigation__content">
+    <div class="navigation__points navigation__points--active"></div>
+    <div class="navigation__infos">Hello world</div>
+  </div>
+  <div class="navigation__content">
+    <div class="navigation__points navigation__points--active"></div>
+    <div class="navigation__infos">Hello mars</div>
+  </div>
+  <div class="navigation__content">
+    <div class="navigation__points navigation__points--active"></div>
+    <div class="navigation__infos">Hello you</div>
+  </div>
+</section>
+
 <div class="squares">
-  <div>item 1</div>
+  <div id="discover">item 1</div>
   <div>item 2</div>
-  <div>item 3</div>
-  <div>item 4</div>
+  <div id="table">item 3</div>
+  <div id="waypoint">item 4</div>
   <div>item 5</div>
-  <div id="waypoint">item 6</div>
+  <div>item 6</div>
   <div>item 7</div>
-  <div>item 8</div>
+  <div id="footer">item 8</div>
 </div>
 
 

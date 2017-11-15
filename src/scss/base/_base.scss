@@ -1,11 +1,7 @@
-h1 {
-  color: brown;
-  font-size: $title-1;
+body {
+  color: $white;
+  font-size: $text-2;
   font-family: $font-1, Arial;
   font-weight: bold;
   text-transform: uppercase;
-
-  &:hover {
-    color: green;
-  }
 }
