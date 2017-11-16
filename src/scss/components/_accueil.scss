@@ -1,21 +1,10 @@
 body,
 html {
+    font-family: $font-1;
     margin: 0;
     padding: 0;
-    background-color: $black !important;
+    background-color: $black;
 }
-
-
-/*-- MOBILE queries --*/
-
-
-/*---------------------*/
-
-
-/*--- Normal screen ---*/
-
-
-/* ACCUEIL */
 
 @mixin medium {
     @media (min-width: #{$medium}) {
@@ -29,75 +18,101 @@ html {
     }
 }
 
+
+/***********/
+
+
+/* ACCUEIL */
+
+
+/***********/
+
 .accueil {
+    margin: 30px 0px 0px 30px;
     @include medium {
-        margin: 30px 30px 100px 30px;
-        .accueil__titre {
-            font-family: $font-1;
-            color: $white;
-            font-size: $title-1;
-            text-transform: uppercase;
-            width: 85%;
-            margin-top: 60px;
-        }
-        .accueil__sous-titre {
-            font-family: $font-1;
-            color: $main-color;
-            width: 60%;
-            font-size: $subtitle-2;
-            margin: 15px 0;
-        }
-        .accueil__texte {
-            font-family: $font-1;
-            color: $white;
-            font-size: $text-3;
-            width: 55%;
-        }
+        margin: 30px 0 0 $margin-left-4;
     }
     @include large {
-        margin: 30px 30px 100px 30px;
-        .accueil__titre {
-            font-family: $font-1;
-            color: $white;
+        margin: 30px 0 0 $margin-left-3;
+    }
+    /* accueil titre */
+    .accueil__titre {
+        color: $white;
+        font-weight: 700;
+        font-size: $title-2;
+        text-transform: uppercase;
+        width: 85%;
+        margin: $margin-top-4 0 0 0;
+        @include medium {
+            font-size: $title-2;
+            width: 45%;
+            margin: $margin-top-1 0 0 0;
+        }
+        @include large {
             font-size: $title-1;
-            text-transform: uppercase;
-            width: 85%;
-            margin-top: 60px;
+            width: 45%;
+            margin: $margin-top-1 0 0 0;
         }
-        .accueil__sous-titre {
-            font-family: $font-1;
-            color: $main-color;
-            width: 60%;
-            font-size: $subtitle-2;
-            margin: 15px 0;
+    }
+    /* accueil sous-titre */
+    .accueil__sous-titre {
+        color: $main-color;
+        width: 55%;
+        font-size: $subtitle-2;
+        margin: $margin-top-6 0 0 0;
+        @include medium {
+            width: 55%;
         }
-        .accueil__texte {
-            font-family: $font-1;
-            color: $white;
+        @include large {
+            width: 45%;
+        }
+    }
+    /* accueil texte */
+    .accueil__texte {
+        color: $white;
+        font-size: $text-3;
+        width: 65%;
+        margin: $margin-top-6 0 0 0;
+        @include medium {
             font-size: $text-3;
             width: 55%;
+        }
+        @include large {
+            font-size: $text-2;
+            width: 45%;
         }
     }
 }
 
 
+/*****************/
+
+
 /* SCROLL BOUTON */
 
+
+/*****************/
+
 .scroll {
-    @include medium {
-        text-align: center;
-        margin-bottom: 80px;
-    }
+    text-align: center;
+    margin: 100px 0 0 0;
     .scroll__text {
-        font-family: $font-1;
+        font-family: $font-2;
+        font-weight: 700;
         text-transform: uppercase;
         color: $main-color;
         font-size: $text-3;
+        margin-left: 5px;
+        @include medium {
+            font-size: $text-2;
+        }
+        @include large {
+            font-size: $text-2;
+        }
     }
     /* scroll arrow */
     .demo a {
         position: absolute;
-        left: 50%;
         z-index: 2;
         display: inline-block;
         -webkit-transform: translate(0, -50%);
@@ -108,12 +123,13 @@ html {
         text-decoration: none;
         transition: opacity .3s;
          :hover {
-            opacity: .5;
+            opacity: 0.5;
         }
     }
     #scroll-arrow a {
         padding-top: 60px;
     }
+    /* scroll animation */
     #scroll-arrow a span {
         position: absolute;
         width: 10px;
@@ -152,208 +168,413 @@ html {
 }
 
 
+/*****************/
+
+
 /* ECHO LOOK APP */
 
+
+/*****************/
+
 .app {
+    margin: 100px 0 0px 0;
+    position: relative;
     @include medium {
-        margin: 30px;
+        margin: 100px 0 0 $margin-left-4;
     }
-    .app__titre {
-        font-family: $font-1;
-        color: $main-color;
-        font-size: $title-2;
-        text-transform: uppercase;
+    @include large {
+        margin: 100px 0 0 $margin-left-3;
     }
-    .app__bouton{
-        top: 280px;
-        text-align: center;
-        position: relative;
-        z-index: 1;
-        .app__bouton-text{
-            font-family: $font-1;
-            text-transform: uppercase;
-            color: $main-color;
-            font-size: $text-3;
-        }
-        // .app__bouton-cercle{
-            
-        // }
-        #app__bouton-bouton {
-            position: absolute;
-            top: 65px;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            width: 44px;
-            height: 44px;
-            margin: auto;
-            transition: visibility 0.5s ease 0s;
-            z-index: 200000 !important;
-        }
-        #app__bouton-bouton a {
-            text-decoration: none;
-        }
-        #app__bouton-bouton .bouton-inner {
-            animation: 1s ease-in-out 0s normal none infinite running kmacb-circle-img-anim;
-            background: $main-color;
-            border: 2px solid transparent;
-            border-radius: 100%;
-            height: 20px;
-            left: 12px;
-            position: absolute;
-            top: 12px;
-            transform-origin: 50% 50% 0;
-            width: 20px;
-        }
-        #app__bouton-bouton .bouton-circle {
-            animation: 2.2s ease-in-out 0s normal none infinite running bouton-circle-anim !important;
-            background-color: transparent;
-            border: 2px solid $main-color;
-            border-radius: 100%;
-            height: 100%;
-            opacity: 0.35;
-            position: absolute;
-            width: 100%;
-        }
-        #app__bouton-bouton .bouton-inner{
-            background-color: $main-color;
-        }
-        #app__bouton-bouton .bouton-circle {
-            border-color: $main-color;
-        }
-        @keyframes bouton-circle-anim {
-        0% {
-            opacity: 0.1;
-            transform: rotate(0deg) scale(0.5) skew(1deg);
-        }
-        30% {
-            opacity: 0.5;
-            transform: rotate(0deg) scale(0.7) skew(1deg);
-        }
-        100% {
-            opacity: 0.6;
-            transform: rotate(0deg) scale(1) skew(1deg);
-        }
-        }
-        @keyframes bouton-circle-anim {
-        0% {
-            opacity: 0.1;
-            transform: rotate(0deg) scale(0.5) skew(1deg);
-        }
-        30% {
-            opacity: 0.5;
-            transform: rotate(0deg) scale(0.7) skew(1deg);
-        }
-        100% {
-            opacity: 0.1;
-            transform: rotate(0deg) scale(1) skew(1deg);
-        }
-        }
-        @keyframes kmacb-circle-img-anim {
-        0% {
-            transform: rotate(0deg) scale(1) skew(1deg);
-        }
-        10% {
-            transform: rotate(-25deg) scale(1) skew(1deg);
-        }
-        20% {
-            transform: rotate(25deg) scale(1) skew(1deg);
-        }
-        30% {
-            transform: rotate(-25deg) scale(1) skew(1deg);
-        }
-        40% {
-            transform: rotate(25deg) scale(1) skew(1deg);
-        }
-        50% {
-            transform: rotate(0deg) scale(1) skew(1deg);
-        }
-        100% {
-            transform: rotate(0deg) scale(1) skew(1deg);
-        }
-        }
-        @keyframes kmacb-circle-img-anim {
-        0% {
-            transform: rotate(0deg) scale(1) skew(1deg);
-        }
-        10% {
-            transform: rotate(-25deg) scale(1) skew(1deg);
-        }
-        20% {
-            transform: rotate(25deg) scale(1) skew(1deg);
-        }
-        30% {
-            transform: rotate(-25deg) scale(1) skew(1deg);
-        }
-        40% {
-            transform: rotate(25deg) scale(1) skew(1deg);
-        }
-        50% {
-            transform: rotate(0deg) scale(1) skew(1deg);
-        }
-        100% {
-            transform: rotate(0deg) scale(1) skew(1deg);
-        }
-        }
-    }
-    .app__outer-container {
-        position: relative;
+    /* app carousel */
+    .app__carousel {
         overflow: hidden;
-        margin: 25px auto 80px auto;
-        border-radius: $border-radius;
-        border: 2px solid white;
-        width: 178px;
-        height: 314px;
-        z-index: 0;
-        .app__inner-container {
-            position: absolute;
-            left: 0;
-            overflow-x: hidden;
-            overflow-y: scroll;
+        #app__slides {
+            position: relative;
+            list-style-type: none;
+            height: 600px;
+            @include medium {
+                height: 550px;
+            }
+            @include large {
+                height: 650px;
+            }
+            /* each slide */
+            .app__slide {
+                position: absolute;
+                opacity: 0;
+                z-index: 1;
+                -webkit-transition: opacity 1s;
+                -moz-transition: opacity 1s;
+                -o-transition: opacity 1s;
+                transition: opacity 1s;
+                /* left contenu */
+                .app__left-contenu {
+                    position: relative;
+                    @include medium {
+                        top: 80px;
+                        float: left;
+                        width: 60%;
+                    }
+                    @include large {
+                        top: 80px;
+                        float: left;
+                        width: 60%;
+                    }
+                    /* titre */
+                    .app__titre {
+                        position: relative;
+                        color: $main-color;
+                        font-weight: 700;
+                        font-size: $subtitle-1;
+                        text-transform: uppercase;
+                        margin: $margin-top-6 0 0 30px;
+                        @include medium {
+                            float: left;
+                            width: 90%;
+                            font-size: $subtitle-1;
+                            margin: $margin-top-6 0 0 0;
+                        }
+                        @include large {
+                            float: left;
+                            width: 90%;
+                            font-size: $title-2;
+                            margin: $margin-top-6 0 0 0;
+                        }
+                    }
+                    /* texte */
+                    .app__text {
+                        position: relative;
+                        display: inline-block;
+                        color: $white;
+                        font-size: $text-3;
+                        margin: $margin-top-6 10px 0 30px;
+                        @include medium {
+                            margin: $margin-top-6 10px 0 0;
+                            font-size: $text-3;
+                            width: 80%;
+                        }
+                        @include large {
+                            margin: $margin-top-6 10px 0 0;
+                            font-size: $text-2;
+                            width: 80%;
+                        }
+                    }
+                }
+                /* right contenu */
+                .app__right-contenu {
+                    position: relative;
+                    @include medium {
+                        float: right;
+                        width: 40%;
+                        text-align: left;
+                        right: 5%;
+                    }
+                    @include large {
+                        float: right;
+                        width: 40%;
+                        text-align: left;
+                        right: 10%;
+                    }
+                    /* phone images */
+                    .app__phone-images {
+                        text-align: center;
+                        margin: 30px 0 0 0;
+                    }
+                    .app__phone-images img {
+                        height: 400px;
+                        width: auto;
+                        @include medium {
+                            height: 500px;
+                            width: auto;
+                        }
+                        @include large {
+                            height: 650px;
+                            width: auto;
+                        }
+                    }
+                    /* ecran virtuel */
+                    .app__outer-container {
+                        position: relative;
+                        overflow: hidden;
+                        margin: 25px auto 80px auto;
+                        border-radius: $border-radius;
+                        border: 2px solid white;
+                        width: 160px;
+                        height: 293px;
+                        z-index: 0;
+                        text-align: center;
+                        @include medium {
+                            width: 200px;
+                            height: 366px;
+                            top: 62px;
+                        }
+                        @include large {
+                            width: 250px;
+                            height: 458px;
+                            top: 82px;
+                        }
+                        .app__bouton-text {
+                            position: absolute;
+                            top: 225px;
+                            left: 33px;
+                            font-family: $font-2;
+                            font-weight: 700;
+                            text-transform: uppercase;
+                            color: $main-color;
+                            font-size: $text-3;
+                            @include medium {
+                                top: 270px;
+                                left: 50px;
+                            }
+                            @include large {
+                                top: 340px;
+                                left: 75px;
+                            }
+                        }
+                        #app__bouton-bouton {
+                            position: absolute;
+                            top: 240px;
+                            left: 58px;
+                            bottom: 0;
+                            width: 44px;
+                            height: 44px;
+                            transition: visibility 0.5s ease 0s;
+                            z-index: 200000 !important;
+                            @include medium {
+                                top: 290px;
+                                left: 78px;
+                            }
+                            @include large {
+                                top: 360px;
+                                left: 105px;
+                            }
+                        }
+                        #app__bouton-bouton a {
+                            text-decoration: none;
+                        }
+                        /* bouton animation */
+                        #app__bouton-bouton .bouton-inner {
+                            animation: 0.2s ease-in-out 0s normal none infinite running bouton-inner-anim;
+                            background: $main-color;
+                            border: 2px solid transparent;
+                            border-radius: 100%;
+                            height: 20px;
+                            left: 12px;
+                            position: absolute;
+                            top: 12px;
+                            transform-origin: 50% 50% 0;
+                            width: 20px;
+                            background-color: $main-color;
+                        }
+                        #app__bouton-bouton .bouton-circle {
+                            animation: 1.5s linear 0s normal none infinite running bouton-circle-anim !important;
+                            background-color: transparent;
+                            border: 2px solid $main-color;
+                            border-radius: 100%;
+                            height: 100%;
+                            opacity: 0.35;
+                            position: absolute;
+                            width: 100%;
+                            border-color: $main-color;
+                        }
+                        @-webkit-keyframes bouton-circle-anim {
+                            0% {
+                                opacity: 0.1;
+                                transform: rotate(0deg) scale(0.5) skew(1deg);
+                            }
+                            30% {
+                                opacity: 0.5;
+                                transform: rotate(0deg) scale(0.7) skew(1deg);
+                            }
+                            100% {
+                                opacity: 0.1;
+                                transform: rotate(0deg) scale(1) skew(1deg);
+                            }
+                        }
+                        @keyframes bouton-circle-anim {
+                            0% {
+                                opacity: 0.1;
+                                transform: rotate(0deg) scale(0.5) skew(1deg);
+                            }
+                            30% {
+                                opacity: 0.5;
+                                transform: rotate(0deg) scale(0.7) skew(1deg);
+                            }
+                            100% {
+                                opacity: 0.1;
+                                transform: rotate(0deg) scale(1) skew(1deg);
+                            }
+                        }
+                        .app__inner-container {
+                            position: absolute;
+                            overflow-x: hidden;
+                            overflow-y: scroll;
+                        }
+                        .app__inner-container img {
+                            width: auto;
+                            height: 294px;
+                            @include medium {
+                                width: auto;
+                                height: 367px;
+                            }
+                            @include large {
+                                width: auto;
+                                height: 459px;
+                            }
+                        }
+                    }
+                }
+            }
+            .showing {
+                opacity: 1;
+                z-index: 2;
+            }
         }
-        .app__inner-container img {
-            width: auto;
-            height: 314px;
+        /* app carousel boutons */
+        .app__boutons {
+            position: relative;
+            z-index: 10;
+            .controls {
+                display: inline-block;
+                background: #333;
+                color: #fff;
+                font-size: 20px;
+                cursor: pointer;
+                border: 2px solid #fff;
+                width: 40px;
+                 :hover {
+                    background: #eee;
+                    color: #333;
+                }
+            }
         }
     }
 }
 
 
+/*************/
+
+
 /* VIDEO 360 */
 
+
+/*************/
+
 .video360 {
+    position: relative;
+    margin: 50px 0 0 0;
     @include medium {
-        margin: 30px;
+        margin: 100px 0 0 30px;
     }
-    .video360__titre {
-        font-family: $font-1;
-        color: $main-color;
-        font-size: $title-2;
-        text-transform: uppercase;
+    @include large {
+        margin: 120px 0 0 $margin-left-3;
     }
-    .video360__texte {
-        font-family: $font-1;
-        color: $white;
-        font-size: $text-3;
-        margin: 25px 0;
-    }
-    .video360__outer-container {
-        position: relative;
-        overflow: hidden;
-        margin: 25px auto 80px auto;
-        border-radius: $border-radius;
-        border: 2px solid white;
-        width: 178px;
-        height: 314px;
-        .video360__inner-container {
-            position: absolute;
-            left: 0;
-            overflow-x: hidden;
-            overflow-y: scroll;
+    /* right contenu */
+    .video360__right-contenu {
+        @include medium {
+            margin: 30px 0 0 $margin-left-4;
+            float: right;
+            width: 60%;
         }
-        .video360__inner-container img {
-            width: auto;
-            height: 314px;
+        @include large {
+            margin: 30px 0 0 $margin-left-3;
+        }
+        /* video360 titre */
+        .video360__titre {
+            color: $main-color;
+            font-weight: 700;
+            font-size: $subtitle-1;
+            text-transform: uppercase;
+            margin: $margin-top-6 0 0 30px;
+            @include medium {
+                font-size: $subtitle-1;
+                margin: $margin-top-6 0 0 0;
+            }
+            @include large {
+                font-size: $title-2;
+                margin: $margin-top-6 0 0 0;
+            }
+        }
+        /* video360 texte */
+        .video360__texte {
+            color: $white;
+            font-size: $text-3;
+            margin: $margin-top-6 10px 0 30px;
+            @include medium {
+                margin: $margin-top-6 10px 0 0;
+                font-size: $text-3;
+                width: 75%;
+            }
+            @include large {
+                margin: $margin-top-6 10px 0 0;
+                font-size: $text-2;
+                width: 75%;
+            }
         }
     }
+    /* bouton */
+    /* ecran virtuel */
+    .video360__left-contenu {
+        @include medium {
+            width: 40%;
+        }
+        @include large {
+            width: 40%;
+        }
+        .video360__outer-container {
+            position: relative;
+            overflow: hidden;
+            margin: 25px auto 80px auto;
+            border-radius: $border-radius;
+            border: 2px solid white;
+            width: 160px;
+            height: 293px;
+            z-index: 0;
+            @include medium {
+                display: inline-block;
+                margin: 0 0 80px 0;
+                width: 200px;
+                height: 366px;
+                left: 15%;
+            }
+            @include large {
+                display: inline-block;
+                margin: auto 0 80px 0;
+                width: 250px;
+                height: 458px;
+                left: 20%;
+            }
+            .video360__inner-container {
+                position: absolute;
+                left: 0;
+                overflow-x: hidden;
+                overflow-y: scroll;
+            }
+            .video360__inner-container img {
+                width: auto;
+                height: 294px;
+                @include medium {
+                    width: auto;
+                    height: 367px;
+                }
+                @include large {
+                    width: auto;
+                    height: 459px;
+                }
+            }
+        }
+    }
+}
+
+
+/*************/
+
+
+/* TESTER */
+
+
+/*************/
+
+.la-la-la {
+    position: relative;
 }
