@@ -1,0 +1,20 @@
+.conclusion-price{
+  .conclusion-price__visuel{
+    
+    position: relative;
+    
+    div{
+      background: #156DF2;
+      width: 525px;
+      height: 215px;
+      border-radius: 44px;
+      position: absolute;
+      z-index: 1;
+    }
+    
+    img{
+      position: absolute;
+      z-index: 2;
+    }
+  }
+}

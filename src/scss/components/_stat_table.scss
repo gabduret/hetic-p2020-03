@@ -4,6 +4,8 @@ table {
   
   margin-left: $margin-left-1;
   margin-right: $margin-left-1;
+  margin-bottom: $margin-top-3;
+  margin-top: $margin-top-3;
   
   //pour toutes les lignes
   tr {
@@ -14,10 +16,11 @@ table {
       font-family: $font-1;
       padding-top: $margin-top-6;
       padding-bottom: $margin-top-6;
+      padding-right: $margin-left-6;
     }
     
     td:nth-of-type(1) {
-      font-size: $subtitle-1;
+      font-size: $subtitle-3;
       color: $main-color;
       //rajouter la graisse ici
     }
@@ -31,27 +34,28 @@ table {
       ul {
         display: flex;
         flex-direction: row;
-        justify-content: flex-end;
-        align-items: flex-start;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
         
         li {
           margin-top: $margin-top-6;
         }
         
         li:nth-of-type(1) {
-          font-size: $subtitle-2;
-          width: 20%;
+          font-size: $text-1;
+          margin-right: $margin-left-7;
         }
         
-        li:nth-of-type(2){
-          width: 80%;
-        }
       }
       
-      ul:nth-of-type(3){
-//        margin-bottom: $margin-top-5;
-      }
     }
     
   }
+  
+  tr:last-of-type{
+    border-bottom: none;
+  }
+  
+  
 }
