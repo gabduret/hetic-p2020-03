@@ -16,46 +16,52 @@ table {
       font-family: $font-1;
       padding-top: $margin-top-6;
       padding-bottom: $margin-top-6;
-      padding-right: $margin-left-6;
-    }
-    
-    td:nth-of-type(1) {
-      font-size: $subtitle-3;
-      color: $main-color;
-      //rajouter la graisse ici
-    }
-  }
-  
-  //la première ligne à un css spécifique
-  tr:nth-of-type(1) {
-    
-    td:nth-of-type(2) {
       
-      ul {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: center;
-        width: 100%;
-        
-        li {
-          margin-top: $margin-top-6;
-        }
-        
-        li:nth-of-type(1) {
-          font-size: $text-1;
-          margin-right: $margin-left-7;
-        }
-        
+      &:nth-of-type(1) {
+        font-size: $text-1;
+        color: $main-color;
+        padding-right: $margin-left-7;
+        font-weight: 600;
       }
-      
     }
     
-  }
-  
-  tr:last-of-type{
-    border-bottom: none;
-  }
-  
+    //la première ligne à un css spécifique
+    &:nth-of-type(1) {
+
+      td{
+        
+        &:nth-of-type(2) {
+
+          ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            width: 100%;
+
+            li {
+              margin-top: $margin-top-6;
+              font-size: $text-3;
+
+              &:nth-of-type(1) {
+                margin-right: $margin-left-7;
+              }
+              
+              &:nth-of-type(2) {
+                font-size: $text-5;
+              }
+            }
+          }
+        }
+
+      }
+
+    }
+    
+    &:last-of-type{
+      border-bottom: none;
+    }
+    
+  }  
   
 }

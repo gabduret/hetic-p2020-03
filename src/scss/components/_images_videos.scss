@@ -1,10 +1,30 @@
-section.images_videos{
+section.images-videos{
+  
+  @media(min-width: 500px) {
+    display: inline;
+  }
+    
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   
-  img{
+  video{
+    width: 100vw;
     
+    @media(min-width: 800px) {
+      width: 50%;
+    }
+  }
+  
+  img{
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+  }
+  
+  .clearBoth{
+    clear: both;
   }
 }
+
