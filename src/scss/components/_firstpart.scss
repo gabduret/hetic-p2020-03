@@ -34,10 +34,7 @@
     position: relative;
     display: flex;
     justify-content: flex-end;
-
-    &:hover {
-      //background-color: rgb(12, 121, 211);
-    }
+    cursor: crosshair;
 
     &:hover .navigation__points {
       background: $main-color-hover;
@@ -51,18 +48,21 @@
     &:hover .navigation__infos:before {
       transform: scaleX(1);
       transition-delay: 0.15s;
+      opacity: 0.8;
+    }
+
+    &:hover .navigation__points:after{
       opacity: 1;
     }
   }
 }
 
-
 .navigation__points {
   width: $points-size-px;
   height: $points-size-px;
   border-radius: 50%;
-  background: $main-color;
-  transition: all 0.1s ease-in-out;
+  background: $main-color;  
+  transition: all 0.3s ease-in-out;
 
   &:after {
     content: "";
@@ -78,21 +78,27 @@
     border-radius: 50%;
   }
 }
+.navigation__points:after {
+  transition: all 0.3s ease;
+}
 .navigation__points--active .navigation__points:after{
   opacity: 1;
 }
 
 .navigation__infos {
   right: 0px;
+  height: 22px;
   width: 120px;
   opacity: 0;
   position: absolute;
+  transform: translateX(-20px);
   transition: all 0.25s ease-in-out;
   transition-delay: 0.1s;
   will-change:transform, opacity;
 
     &:before {
       content: "";
+      top: -5px;
       left: -10px;
       width: 100%;
       height: 100%;
@@ -108,8 +114,6 @@
 }
 
 
-
-
 /*
  * Content style test
  */
@@ -122,5 +126,9 @@
   height: 300px;
   margin: 10px;
   color: $white;
-  background: $black;  
+  background: $black;
+}
+.squares {
+  overflow-y: scroll;
+  scroll-behavior: smooth;
 }

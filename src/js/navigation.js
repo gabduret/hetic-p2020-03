@@ -1,5 +1,18 @@
 import 'waypoints/lib/noframework.waypoints.min'
+import SmoothScroll from 'smooth-scroll'
 
+/*
+ * Variables
+ * init variables
+ */
+const anchors = ['discover', 'table', 'footer']
+const header_item = document.getElementById('fixedHeader')
+const nav_items = document.querySelectorAll('.navigation__content')
+
+const nav_one = document.getElementById(anchors[0] + 'Point')
+const nav_two = document.getElementById(anchors[1] + 'Point')
+const nav_three = document.getElementById(anchors[2] + 'Point')
+let prev_active_point = nav_one
 
 /*
  * HEADER
@@ -7,7 +20,6 @@ import 'waypoints/lib/noframework.waypoints.min'
  * state : in progress
  * > scroll detection on the whole page
  */
-const header_item = document.getElementById('fixedHeader')
 
 var waypoint = new Waypoint({
   element: document.getElementById('direction'),
@@ -25,27 +37,38 @@ var waypoint = new Waypoint({
   }
 })
 
+/*
+ * NAVIGATION
+ * smoothscroll
+ * state : done
+ */
+
+var scroll = new SmoothScroll();
+
 
 /*
  * NAVIGATION
  * Waypoint
- * state : in progress
- * > smooth scroll
+ * state : done
  */
-const anchors = ['discover', 'table', 'footer']
-const nav_items = document.querySelectorAll('.navigation__content')
-
 for(let i = 0; i < nav_items.length; i++) {
-  nav_items[i].addEventListener('click', () => {
-    location.href = "#" + anchors[i];
+  nav_items[i].addEventListener('click', (event) => {
+    let target = event.target.getAttribute('data-target');
+
+    if(target) {
+        const targetElement = document.getElementById(target)
+        // location.href = "#" + anchors[i];
+        scroll.animateScroll( targetElement )
+        console.log('target')
+    }
+    else {
+        if(event.target.classList.contains('navigation__points')) {            
+            const targetElement = document.getElementById(event.target.parentNode.getAttribute("data-target"))
+            scroll.animateScroll( targetElement )
+        }
+    }
   })
 }
-
-
-const nav_one = document.getElementById(anchors[0] + 'Point')
-const nav_two = document.getElementById(anchors[1] + 'Point')
-const nav_three = document.getElementById(anchors[2] + 'Point')
-let prev_active_point = nav_one
 
 /*
  * NAVIGATION

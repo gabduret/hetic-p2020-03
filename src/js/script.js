@@ -1,2 +1,2 @@
-import './useWaypoints';
-import './accueil';
+import './navigation'
+import './accueil'
