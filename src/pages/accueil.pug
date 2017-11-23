@@ -5,37 +5,47 @@ include ../partials/header.pug
 <!-- ACCUEIL -->
 
 <section class="accueil">
-    <div class="accueil__titre">
-        <p>echo look</p>
+    <div class="accueil__left-contenu">
+        <div class="accueil__titre">
+            <p>echo look</p>
+        </div>
+        <div class="accueil__sous-titre">
+            <p>Aime ton look tous les jours</p>
+        </div>
+        <div class="accueil__texte">
+            <p>Avec Echo Look, vous allez pouvoir controler votre style chaque matin.
+                <br> Il vous aidera dans votre choix avec une tenue adapté au temps extérieur mais aussi à la tendance du moment
+                pour être toujours plus au top.</p>
+        </div>
     </div>
-    <div class="accueil__sous-titre">
-        <p>Aime ton look tous les jours</p>
+    <div class="accueil__image">
+        //- <img src="./img/accueil/large-Echo_Look_Accueil.png" alt="">
+
+        <img srcset="../img/accueil/Small-Echo_Look_Accueil.png 40w, ../img/accueil/Medium-Echo_Look_Accueil.png 200w, ../img/accueil/large-Echo_Look_Accueil.png 250w" alt="">
+        
+
     </div>
-    <div class="accueil__texte">
-        <p>Avec Echo Look, vous allez pouvoir controler votre style chaque matin.
-            <br> Il vous aidera dans votre choix avec une tenue adapté au temps extérieur mais aussi à la tendance du moment
-            pour être toujours plus au top.</p>
-    </div>
-    <img class="accueil__image" src="" alt="">
 </section>
 
 <!-- SCROLL BOUTON -->
 
-<section class="scroll">
-    <div class="scroll__text">
-        <p>decouvrir</p>
-    </div>
-    //- arrow
-    <section id="scroll-arrow" class="demo">
-        <a href="#scroll-destination">
-            <span></span>
-        </a>
+<a href="#scroll-destination">
+    <section class="scroll">
+        <div class="scroll__text">
+            <p>decouvrir</p>
+        </div>
+        //- arrow
+        <section id="scroll-arrow" class="demo">
+            <a href="#scroll-destination">
+                <span></span>
+            </a>
+        </section>
     </section>
-</section>
+</a>
 
 
 <!-- DECORATION -->
-<section class="decor-1">
+<section class="decor">
     <div class="decor-1__inner"></div>
 </section>
 
@@ -43,11 +53,11 @@ include ../partials/header.pug
 <!-- ECHO LOOK APP -->
 
 <section class="app" id="scroll-destination">
-    //- app carousel
-    <div class="app__carousel">
-        <ul id="app__slides">
-            //- slide 1 - echo look app
-            <li class="app__slide showing">
+    <!-- app carousel -->
+    <div class="app__carousel" id="app__carousel">
+        <div id="app__slides">
+            <!-- slide 1 - echo look app -->
+            <div class="app__slide" id="slide-1" style="opacity: 1; display: inline-block;" data-state="active">
                 <div class="app__left-contenu">
                     <div class="app__titre">
                         <p>echo look app</p>
@@ -57,13 +67,19 @@ include ../partials/header.pug
                     </div>
                 </div>
                 <div class="app__right-contenu">
+                    <div class="app__phone-background"></div>
                     <div class="app__phone-images">
-                        <img src="./img/app/large/Iphone 7_05.png" alt="">
+                        <img class="app__blured-image" src="./img/app/large/Iphone 7_05.png" alt="">
+                        <!-- en savoir plus bouton -->
+                        <div class="app__phone-bouton" id="bouton-1">
+                            <div class="bouton-circle"></div>
+                            <div class="bouton-inner"></div>
+                        </div>
                     </div>
                 </div>
-            </li>
-            //- slide 2 - lookbook personnel
-            <li class="app__slide">
+            </div>
+            <!-- slide 2 - lookbook personnel -->
+            <div class="app__slide" id="slide-2">
                 <div class="app__left-contenu">
                     <div class="app__titre">
                         <p>votre lookbook personnel</p>
@@ -73,13 +89,19 @@ include ../partials/header.pug
                     </div>
                 </div>
                 <div class="app__right-contenu">
+                    <div class="app__phone-background"></div>
                     <div class="app__phone-images">
-                        <img src="./img/app/large/Iphone 7_01.png" alt="">
+                        <img class="app__blured-image" src="./img/app/large/Iphone 7_01.png" alt="">
+                        <!-- en savoir plus bouton -->
+                        <div class="app__phone-bouton" id="bouton-2">
+                            <div class="bouton-circle"></div>
+                            <div class="bouton-inner"></div>
+                        </div>
                     </div>
                 </div>
-            </li>
-            //- slide 3 - Style check
-            <li class="app__slide">
+            </div>
+            <!-- slide 3 - Style check -->
+            <div class="app__slide" id="slide-3">
                 <div class="app__left-contenu">
                     <div class="app__titre">
                         <p>style check</p>
@@ -89,13 +111,19 @@ include ../partials/header.pug
                     </div>
                 </div>
                 <div class="app__right-contenu">
+                    <div class="app__phone-background"></div>
                     <div class="app__phone-images">
-                        <img src="./img/app/large/Iphone 7_04.png" alt="">
+                        <img class="app__blured-image" src="./img/app/large/Iphone 7_04.png" alt="">
+                        <!-- en savoir plus bouton -->
+                        <div class="app__phone-bouton" id="bouton-3">
+                            <div class="bouton-circle"></div>
+                            <div class="bouton-inner"></div>
+                        </div>
                     </div>
                 </div>
-            </li>
-            //- slide 4 - photo et video
-            <li class="app__slide">
+            </div>
+            <!-- slide 4 - photo et video -->
+            <div class="app__slide" id="slide-4">
                 <div class="app__left-contenu">
                     <div class="app__titre">
                         <p>photo et video</p>
@@ -105,29 +133,41 @@ include ../partials/header.pug
                     </div>
                 </div>
                 <div class="app__right-contenu">
+                    <div class="app__phone-background"></div>
                     <div class="app__phone-images">
-                        <img src="./img/app/large/Iphone 7_02.png" alt="">
+                        <img class="app__blured-image" src="./img/app/large/Iphone 7_02.png" alt="">
+                        <!-- en savoir plus bouton -->
+                        <div class="app__phone-bouton" id="bouton-4">
+                            <div class="bouton-circle"></div>
+                            <div class="bouton-inner"></div>
+                        </div>
                     </div>
                 </div>
-            </li>
-            //- slide 5 - alex votre assistance
-            <li class="app__slide">
+            </div>
+            <!-- slide 5 - alex votre assistance -->
+            <div class="app__slide" id="slide-5">
                 <div class="app__left-contenu">
                     <div class="app__titre">
-                        <p>alexa votre assistance personnel</p>
+                        <p>alexa, assistance personnel</p>
                     </div>
                     <div class="app__text">
                         <p>Boosté avec l’intelligence d’Alexa, votre Echo Look vous permet de lire les nouvelles et les livres audio, configurer des alarmes, obtenir des informations sur la circulation et la météo, contrôler les appareils portables intelligents, jouer de la musique et plus encore. Ajoutez aussi de nouvelles fonctionnalités comme Starbucks, Fitbit, NPR et plus encore.</p>
                     </div>
                 </div>
                 <div class="app__right-contenu">
+                    <div class="app__phone-background"></div>
                     <div class="app__phone-images">
-                        <img src="./img/app/large/Iphone 7_03.png" alt="">
+                        <img class="app__blured-image" src="./img/app/large/Iphone 7_03.png" alt="">
+                        <!-- en savoir plus bouton -->
+                        <div class="app__phone-bouton" id="bouton-5">
+                            <div class="bouton-circle"></div>
+                            <div class="bouton-inner"></div>
+                        </div>
                     </div>
                 </div>
-            </li>
-            //- slide 6 - testez style check
-            <li class="app__slide">
+            </div>
+            <!-- slide 6 - testez style check -->
+            <div class="app__slide">
                 <div class="app__left-contenu">
                     <div class="app__titre">
                         <p>testez style check maintenant en cliquant sur «touchez-moi»</p>
@@ -136,7 +176,7 @@ include ../partials/header.pug
                         <p></p>
                     </div>
                 </div>
-                //- ecran virtuel
+                <!-- ecran virtuel -->
                 <div class="app__right-contenu">
                     <div class="app__outer-container">
                         <div class="app__inner-container">
@@ -144,22 +184,70 @@ include ../partials/header.pug
                                 <p>touchez moi</p>
                             </div>
                             <div id="app__bouton-bouton">
-                                <div class="bouton-circle"></div>
-                                <div class="bouton-inner"></div>
+                                <div class="last-bouton-circle"></div>
+                                <div class="last-bouton-inner"></div>
                             </div>
                             <img src="./img/accueil/gab.png" alt="">
                         </div>
                     </div>
                 </div>
-            </li>
-        </ul>
-        //- app carousel buttons
-        <div class="app__boutons">
-            <button class="controls" id="previous">&lt;</button>
-            <button class="controls" id="pause">&#10074;&#10074;</button>
-            <button class="controls" id="next">&gt;</button>
+            </div>
         </div>
+        <!-- app carousel indicators -->
+        <div class="app__carousel-indicators">
+            <ul class="list">
+                <li class="list__item">
+                    <input class="indicator radio-btn" id="a-opt" name="indicator" data-slide="1" data-state="" checked type="radio" />
+                    <label for="a-opt" class="label"></label>
+                    <div class="check"></div>
+                </li>
+                <li class="list__item">
+                    <input class="indicator radio-btn" id="b-opt" name="indicator" data-slide="2" type="radio" />
+                    <label for="b-opt" class="label"></label>
+                    <div class="check"></div>
+                </li>
+                <li class="list__item">
+                    <input class="indicator radio-btn" id="c-opt" name="indicator" data-slide="3" type="radio" />
+                    <label for="c-opt" class="label"></label>
+                    <div class="check"></div>
+                </li>
+                <li class="list__item">
+                    <input class="indicator radio-btn" id="d-opt" name="indicator" data-slide="4" type="radio" />
+                    <label for="d-opt" class="label"></label>
+                    <div class="check"></div>
+                </li>
+                <li class="list__item">
+                    <input class="indicator radio-btn" id="e-opt" name="indicator" data-slide="5" type="radio" />
+                    <label for="e-opt" class="label"></label>
+                    <div class="check"></div>
+                </li>
+                <li class="list__item">
+                    <input class="indicator radio-btn" id="f-opt" name="indicator" data-slide="6" type="radio" />
+                    <label for="f-opt" class="label"></label>
+                    <div class="check"></div>
+                </li>
+            </ul>
+        </div>
+        
+        //- app carousel buttons
+        //- <div class="app__carousel-boutons">
+
+        //-     <button class="button" id="slide-1"></button>
+        //-     <button class="button" id="slide-2"></button>
+        //-     <button class="button" id="slide-3"></button>
+        //-     <button class="button" id="slide-4"></button>
+        //-     <button class="button" id="slide-5"></button>
+        //-     <button class="button" id="slide-6"></button>
+
+        //-     <br>
+        //-     <button class="controls" id="previous">&lt;</button>
+        //-     <button class="controls" id="pause">&#10074;&#10074;</button>
+        //-     <button class="controls" id="next">&gt;</button>
+        //- </div>
     </div>
+
+
+
 </section>
 
 <!-- VIDEO 360 -->

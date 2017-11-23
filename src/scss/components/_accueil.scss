@@ -28,6 +28,8 @@ html {
 /***********/
 
 .accueil {
+    display: block;
+    position: relative;
     margin: 30px 0px 0px 30px;
     @include medium {
         margin: 30px 0 0 $margin-left-4;
@@ -35,51 +37,124 @@ html {
     @include large {
         margin: 30px 0 0 $margin-left-3;
     }
-    /* accueil titre */
-    .accueil__titre {
-        color: $white;
-        font-weight: 700;
-        font-size: $title-2;
-        text-transform: uppercase;
-        width: 85%;
-        margin: $margin-top-4 0 0 0;
+    /* accueil left contenu */
+    .accueil__left-contenu{
+        display: inline-block;
+        position: relative;
+        width: 60%;
         @include medium {
+            width: 55%;
+        }
+        @include large{
+            width: 55%;
+        }
+        /* accueil titre */
+        .accueil__titre {
+            color: $white;
+            font-weight: 700;
             font-size: $title-2;
-            width: 45%;
-            margin: $margin-top-1 0 0 0;
+            z-index: 5;
+            text-transform: uppercase;
+            margin: $margin-top-4 0 0 0;
+            @include medium {
+                font-size: $title-2;
+                margin: $margin-top-1 0 0 0;
+            }
+            @include large {
+                font-size: $title-1;
+                margin: $margin-top-1 0 0 0;
+            }
         }
-        @include large {
-            font-size: $title-1;
-            width: 45%;
-            margin: $margin-top-1 0 0 0;
+        /* accueil sous-titre */
+        .accueil__sous-titre {
+            color: $main-color;
+            width: 95%;
+            font-size: $subtitle-2;
+            line-height: $line-height-sous-titre-mobile;
+            z-index: 5;
+            margin: $margin-top-6 0 0 0;
+            @include medium {
+                width: 90%;
+            }
+            @include large {
+                line-height: $line-height-sous-titre-desktop;
+                width: 85%;
+            }
         }
-    }
-    /* accueil sous-titre */
-    .accueil__sous-titre {
-        color: $main-color;
-        width: 55%;
-        font-size: $subtitle-2;
-        margin: $margin-top-6 0 0 0;
-        @include medium {
-            width: 55%;
-        }
-        @include large {
-            width: 45%;
-        }
-    }
-    /* accueil texte */
-    .accueil__texte {
-        color: $white;
-        font-size: $text-3;
-        width: 65%;
-        margin: $margin-top-6 0 0 0;
-        @include medium {
+        /* accueil texte */
+        .accueil__texte {
+            color: $white;
             font-size: $text-3;
-            width: 55%;
+            line-height: $line-height-text;
+            width: 80%;
+            margin: $margin-top-6 0 0 0;
+            z-index: 5;
+            @include medium {
+                font-size: $text-3;
+                width: 90%;
+            }
+            @include large {
+                font-size: $text-2;
+                width: 85%;
+            }
+        }
+    }
+    .accueil__image {
+        position: relative;
+        float: right;
+        width: 40%;
+        margin: $margin-top-2 0 0 0;
+        z-index: 5;
+        @include medium {
+            width: 40%;
+            margin: $margin-top-2 0 0 0;
+            z-index: 5;
         }
         @include large {
-            font-size: $text-2;
             width: 45%;
+            left: 50px;
+            margin: $margin-top-2 0 0 0;
+        }
+    }
+    /* App image gradient */
+    .accueil__image::after {
+        margin: 220px 0 0 -58px;
+        display: inline-block;
+        left: 0;
+        height: 190px;
+        width: 135px;
+        transform: rotate(15deg);
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, #111111 50%);
+        content: '';
+        z-index: 0;
+        @include medium {
+            margin: 210px 0 0 -70px;
+            height: 330px;
+            width: 70%;
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, #111111 50%);
+        }
+        @include large {
+            margin: 300px 0 0 -130px;
+            height: 380px;
+            width: 60%;
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, #111111 50%);
+        }
+    }
+    .accueil__image img{
+        position: absolute;
+        left: -30px;
+        // height: 380px;
+        width: 145px;
+        z-index: 0;
+        transform: rotate(15deg);
+        -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+        @include medium {
+            // height: 500px;
+            width: 200px;
+        }
+        @include large {
+            // height: 600px;
+            width: 250px;
         }
     }
 }
@@ -94,8 +169,15 @@ html {
 /*****************/
 
 .scroll {
+    clear: both;
     text-align: center;
     margin: 100px 0 0 0;
+    @include medium {
+        margin: 200px 0 0 0;
+    }
+    @include large {
+        margin: 400px 0 0 0;
+    }
     .scroll__text {
         font-family: $font-2;
         font-weight: 700;
@@ -171,13 +253,36 @@ html {
 /*****************/
 
 
+/* DECORATION */
+
+
+/*****************/
+
+.decor{
+    .decor-1__inner{
+        position: absolute;
+        top: 1300px;
+        left: 0;
+        width: 100%;
+        height: 430px;
+        transform: skewY(-40deg);
+        background: $white;
+        opacity: 0.1;
+        z-index: 0;
+    }
+}
+
+
+/*****************/
+
+
 /* ECHO LOOK APP */
 
 
 /*****************/
 
 .app {
-    margin: 100px 0 0px 0;
+    margin: 100px 0 0 0;
     position: relative;
     @include medium {
         margin: 100px 0 0 $margin-left-4;
@@ -191,16 +296,18 @@ html {
         #app__slides {
             position: relative;
             list-style-type: none;
-            height: 600px;
+            height: 555px;
             @include medium {
-                height: 550px;
+                height: 580px;
             }
             @include large {
-                height: 650px;
+                height: 660px;
             }
             /* each slide */
             .app__slide {
+                display: none;
                 position: absolute;
+                width: 100%;
                 opacity: 0;
                 z-index: 1;
                 -webkit-transition: opacity 1s;
@@ -211,11 +318,15 @@ html {
                 .app__left-contenu {
                     position: relative;
                     @include medium {
+                        position: relative;
+                        display: block;
                         top: 80px;
                         float: left;
                         width: 60%;
                     }
                     @include large {
+                        position: relative;
+                        display: block;
                         top: 80px;
                         float: left;
                         width: 60%;
@@ -226,6 +337,8 @@ html {
                         color: $main-color;
                         font-weight: 700;
                         font-size: $subtitle-1;
+                        line-height: $line-height-sous-titre-mobile;
+                        z-index: 5;
                         text-transform: uppercase;
                         margin: $margin-top-6 0 0 30px;
                         @include medium {
@@ -238,58 +351,175 @@ html {
                             float: left;
                             width: 90%;
                             font-size: $title-2;
+                            line-height: $line-height-sous-titre-desktop;
                             margin: $margin-top-6 0 0 0;
                         }
                     }
                     /* texte */
                     .app__text {
-                        position: relative;
-                        display: inline-block;
+                        margin: $margin-top-5 auto 0 auto;
+                        left: 0;
+                        right: 0;
+                        width: 75%;
+                        display: none;
+                        position: absolute;
                         color: $white;
                         font-size: $text-3;
-                        margin: $margin-top-6 10px 0 30px;
+                        line-height: $line-height-text;
+                        z-index: 5;
                         @include medium {
                             margin: $margin-top-6 10px 0 0;
+                            position: relative;
+                            display: inline-block;
                             font-size: $text-3;
                             width: 80%;
                         }
                         @include large {
                             margin: $margin-top-6 10px 0 0;
+                            position: relative;
+                            display: inline-block;
                             font-size: $text-2;
                             width: 80%;
                         }
                     }
+                    .app__text-mobile-on {
+                        display: block;
+                    }
                 }
                 /* right contenu */
                 .app__right-contenu {
+                    margin: 0 0 0 0;
                     position: relative;
                     @include medium {
+                        margin: 0 0 0 0;
+                        display: inline-block;
                         float: right;
                         width: 40%;
                         text-align: left;
                         right: 5%;
                     }
                     @include large {
+                        margin: 0 0 0 0;
                         float: right;
                         width: 40%;
                         text-align: left;
                         right: 10%;
                     }
+                    /* phone background */
+                    .app__phone-background {
+                        display: none;
+                        margin: 0 auto;
+                        left: 0;
+                        right: 0;
+                        position: absolute;
+                        width: 83%;
+                        height: 400px;
+                        border-radius: 10px;
+                        background: rgba(48,48,48,0.75);
+                        z-index: 4;
+                        @include medium {
+                            display: none;
+                        }
+                        @include large {
+                            display: none;
+                        }
+                    }
+                    .app__phone-background-on {
+                        display: block;
+                    }
                     /* phone images */
                     .app__phone-images {
                         text-align: center;
-                        margin: 30px 0 0 0;
-                    }
-                    .app__phone-images img {
-                        height: 400px;
-                        width: auto;
-                        @include medium {
-                            height: 500px;
-                            width: auto;
+                        margin: 15px 0 0 0;
+                        position: relative;
+                        /* en savoir plus bouton */
+                        .app__phone-bouton {
+                            margin: 0 auto 0 auto;
+                            position: relative;
+                            width: 44px;
+                            height: 44px;
+                            cursor: pointer;
+                            transition: visibility 0.5s ease 0s;
+                            z-index: 200000 !important;
+                            @include medium {
+                                display: none;
+                            }
                         }
-                        @include large {
-                            height: 650px;
-                            width: auto;
+                        .app__phone-bouton a {
+                            text-decoration: none;
+                        }
+                        /* bouton animation */
+                        .app__phone-bouton .bouton-inner {
+                            animation: 0.2s ease-in-out 0s normal none infinite running bouton-inner-anim;
+                            background: $main-color;
+                            border: 2px solid transparent;
+                            border-radius: 100%;
+                            height: 20px;
+                            left: 12px;
+                            position: absolute;
+                            top: 12px;
+                            transform-origin: 50% 50% 0;
+                            width: 20px;
+                            background-color: $main-color;
+                        }
+                        .app__phone-bouton .bouton-circle {
+                            animation: 1.5s linear 0s normal none infinite running bouton-circle-anim !important;
+                            background-color: transparent;
+                            border: 2px solid $main-color;
+                            border-radius: 100%;
+                            height: 100%;
+                            opacity: 0.35;
+                            position: absolute;
+                            width: 100%;
+                            border-color: $main-color;
+                        }
+                        @-webkit-keyframes bouton-circle-anim {
+                            0% {
+                                opacity: 0.1;
+                                transform: rotate(0deg) scale(0.5) skew(1deg);
+                            }
+                            30% {
+                                opacity: 0.5;
+                                transform: rotate(0deg) scale(0.7) skew(1deg);
+                            }
+                            100% {
+                                opacity: 0.1;
+                                transform: rotate(0deg) scale(1) skew(1deg);
+                            }
+                        }
+                        @keyframes bouton-circle-anim {
+                            0% {
+                                opacity: 0.1;
+                                transform: rotate(0deg) scale(0.5) skew(1deg);
+                            }
+                            30% {
+                                opacity: 0.5;
+                                transform: rotate(0deg) scale(0.7) skew(1deg);
+                            }
+                            100% {
+                                opacity: 0.1;
+                                transform: rotate(0deg) scale(1) skew(1deg);
+                            }
+                        }
+                    }
+                    .app__phone-images {
+                        .app__blured-image {
+                        height: 390px;
+                        width: auto;
+                        // filter: blur(0px);
+                            @include medium {
+                                height: 500px;
+                                width: auto;
+                                filter: none;
+                            }
+                            @include large {
+                                height: 650px;
+                                width: auto;
+                                filter: none;
+                            }
+                        }
+                        .app__blured-image-on{
+                            filter: blur(10px);
                         }
                     }
                     /* ecran virtuel */
@@ -353,56 +583,59 @@ html {
                             text-decoration: none;
                         }
                         /* bouton animation */
-                        #app__bouton-bouton .bouton-inner {
-                            animation: 0.2s ease-in-out 0s normal none infinite running bouton-inner-anim;
-                            background: $main-color;
-                            border: 2px solid transparent;
-                            border-radius: 100%;
-                            height: 20px;
-                            left: 12px;
-                            position: absolute;
-                            top: 12px;
-                            transform-origin: 50% 50% 0;
-                            width: 20px;
-                            background-color: $main-color;
-                        }
-                        #app__bouton-bouton .bouton-circle {
-                            animation: 1.5s linear 0s normal none infinite running bouton-circle-anim !important;
-                            background-color: transparent;
-                            border: 2px solid $main-color;
-                            border-radius: 100%;
-                            height: 100%;
-                            opacity: 0.35;
-                            position: absolute;
-                            width: 100%;
-                            border-color: $main-color;
-                        }
-                        @-webkit-keyframes bouton-circle-anim {
-                            0% {
-                                opacity: 0.1;
-                                transform: rotate(0deg) scale(0.5) skew(1deg);
+                        #app__bouton-bouton {
+                            cursor: pointer;
+                            .last-bouton-inner {
+                                animation: 0.2s ease-in-out 0s normal none infinite running bouton-inner-anim;
+                                background: $main-color;
+                                border: 2px solid transparent;
+                                border-radius: 100%;
+                                height: 20px;
+                                left: 12px;
+                                position: absolute;
+                                top: 12px;
+                                transform-origin: 50% 50% 0;
+                                width: 20px;
+                                background-color: $main-color;
                             }
-                            30% {
-                                opacity: 0.5;
-                                transform: rotate(0deg) scale(0.7) skew(1deg);
+                            .last-bouton-circle {
+                                animation: 1.5s linear 0s normal none infinite running bouton-circle-anim !important;
+                                background-color: transparent;
+                                border: 2px solid $main-color;
+                                border-radius: 100%;
+                                height: 100%;
+                                opacity: 0.35;
+                                position: absolute;
+                                width: 100%;
+                                border-color: $main-color;
                             }
-                            100% {
-                                opacity: 0.1;
-                                transform: rotate(0deg) scale(1) skew(1deg);
+                            @-webkit-keyframes bouton-circle-anim {
+                                0% {
+                                    opacity: 0.1;
+                                    transform: rotate(0deg) scale(0.5) skew(1deg);
+                                }
+                                30% {
+                                    opacity: 0.5;
+                                    transform: rotate(0deg) scale(0.7) skew(1deg);
+                                }
+                                100% {
+                                    opacity: 0.1;
+                                    transform: rotate(0deg) scale(1) skew(1deg);
+                                }
                             }
-                        }
-                        @keyframes bouton-circle-anim {
-                            0% {
-                                opacity: 0.1;
-                                transform: rotate(0deg) scale(0.5) skew(1deg);
-                            }
-                            30% {
-                                opacity: 0.5;
-                                transform: rotate(0deg) scale(0.7) skew(1deg);
-                            }
-                            100% {
-                                opacity: 0.1;
-                                transform: rotate(0deg) scale(1) skew(1deg);
+                            @keyframes bouton-circle-anim {
+                                0% {
+                                    opacity: 0.1;
+                                    transform: rotate(0deg) scale(0.5) skew(1deg);
+                                }
+                                30% {
+                                    opacity: 0.5;
+                                    transform: rotate(0deg) scale(0.7) skew(1deg);
+                                }
+                                100% {
+                                    opacity: 0.1;
+                                    transform: rotate(0deg) scale(1) skew(1deg);
+                                }
                             }
                         }
                         .app__inner-container {
@@ -425,26 +658,78 @@ html {
                     }
                 }
             }
-            .showing {
-                opacity: 1;
-                z-index: 2;
-            }
+            // .showing {
+            //     opacity: 1;
+            //     z-index: 2;
+            // }
         }
-        /* app carousel boutons */
-        .app__boutons {
-            position: relative;
-            z-index: 10;
-            .controls {
+        /* app carousel indicators */
+        .app__carousel-indicators {
+            margin: 5px 0 0 0;
+            position: absolute;
+            top: 200px;
+            right: 5px;
+            width: 30px;
+            text-align: center;
+            z-index: 20;
+            @include medium {
+                margin: 0 0 20px 0;
+                display: block;
+                top: 440px;
+                right: 19%;
+                width: 100%;
+            }
+            @include large {
+                top: 550px;
+                right: 24%;
+                margin: 20px 0 0 -140px;
+            }
+            .list__item {
                 display: inline-block;
-                background: #333;
-                color: #fff;
-                font-size: 20px;
-                cursor: pointer;
-                border: 2px solid #fff;
-                width: 40px;
-                 :hover {
-                    background: #eee;
-                    color: #333;
+                position: relative;
+                height: 30px;
+                &:hover .label {
+                    color: $main-color;
+                    &::before {
+                        border: 3px solid $main-color;
+                    }
+                }
+                .radio-btn {
+                    display: none;
+                    &:checked + .label {
+                        color: $main-color;
+                        &::before {
+                            border: 3px solid $main-color;
+                            background: $white;
+                        }
+                    }
+                }
+                .indicator {
+                    text-align: center;
+                    margin: 4px 2px;
+                    cursor: pointer;
+                }
+                .label {
+                    display: flex;
+                    padding: 0 3px;
+                    cursor: pointer;
+                    transition: all 0.25s linear;
+                    @include medium {
+                        padding: 0 3px;
+                    }
+                }
+                .label::before {
+                    height: 18px;
+                    width: 18px;
+                    content: "";
+                    border: 4px solid $white;
+                    border-radius: 50%;
+                    transition: all 0.25s linear;
+                    @include medium {
+                        height: 18px;
+                        width: 18px;
+                        border: 3px solid $white;
+                    }
                 }
             }
         }
@@ -484,6 +769,8 @@ html {
             color: $main-color;
             font-weight: 700;
             font-size: $subtitle-1;
+            line-height: $line-height-sous-titre-mobile;
+            z-index: 5;
             text-transform: uppercase;
             margin: $margin-top-6 0 0 30px;
             @include medium {
@@ -492,6 +779,7 @@ html {
             }
             @include large {
                 font-size: $title-2;
+                line-height: $line-height-sous-titre-desktop;
                 margin: $margin-top-6 0 0 0;
             }
         }
@@ -499,6 +787,7 @@ html {
         .video360__texte {
             color: $white;
             font-size: $text-3;
+            line-height: $line-height-text;
             margin: $margin-top-6 10px 0 30px;
             @include medium {
                 margin: $margin-top-6 10px 0 0;
