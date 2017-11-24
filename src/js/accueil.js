@@ -74,6 +74,8 @@ function carouselShow(num) {
     indicators[num].checked = true;
     indicators[num].setAttribute('data-state', 'active');
     slides[num].setAttribute('data-state', 'active');
+    if(slides[num].querySelector('.app__blured-image-on').classList.remove('.app__blured-image-on'));
+    
 
     slides[num].style.opacity=1;
     slides[num].style.display="inline-block";

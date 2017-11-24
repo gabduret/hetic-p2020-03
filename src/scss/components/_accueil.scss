@@ -296,7 +296,7 @@ html {
         #app__slides {
             position: relative;
             list-style-type: none;
-            height: 555px;
+            height: 575px;
             @include medium {
                 height: 580px;
             }
@@ -340,7 +340,7 @@ html {
                         line-height: $line-height-sous-titre-mobile;
                         z-index: 5;
                         text-transform: uppercase;
-                        margin: $margin-top-6 0 0 30px;
+                        margin: $margin-top-6 5px 0 30px;
                         @include medium {
                             float: left;
                             width: 90%;
@@ -357,10 +357,9 @@ html {
                     }
                     /* texte */
                     .app__text {
-                        margin: $margin-top-5 auto 0 auto;
-                        left: 0;
-                        right: 0;
-                        width: 75%;
+                        margin: 20px auto 0 auto;
+                        left: 10.8%;
+                        width: 205px;
                         display: none;
                         position: absolute;
                         color: $white;
@@ -368,6 +367,8 @@ html {
                         line-height: $line-height-text;
                         z-index: 5;
                         @include medium {
+                            left: 0;
+                            width: 75%;
                             margin: $margin-top-6 10px 0 0;
                             position: relative;
                             display: inline-block;
@@ -408,12 +409,11 @@ html {
                     /* phone background */
                     .app__phone-background {
                         display: none;
-                        margin: 0 auto;
-                        left: 0;
-                        right: 0;
+                        margin: 0 auto 0 0;
                         position: absolute;
-                        width: 83%;
-                        height: 400px;
+                        left: 8%;
+                        width: 225px;
+                        height: 420px;
                         border-radius: 10px;
                         background: rgba(48,48,48,0.75);
                         z-index: 4;
@@ -426,10 +426,12 @@ html {
                     }
                     .app__phone-background-on {
                         display: block;
+                        @include medium {
+                        display: none;
+                        }
                     }
                     /* phone images */
                     .app__phone-images {
-                        text-align: center;
                         margin: 15px 0 0 0;
                         position: relative;
                         /* en savoir plus bouton */
@@ -503,8 +505,10 @@ html {
                         }
                     }
                     .app__phone-images {
+                        left: 8%;
+                        width: 225px;
                         .app__blured-image {
-                        height: 390px;
+                        height: 435px;
                         width: auto;
                         // filter: blur(0px);
                             @include medium {
@@ -520,20 +524,25 @@ html {
                         }
                         .app__blured-image-on{
                             filter: blur(10px);
+                            @include medium {
+                                filter: blur(0px);
+                            }
                         }
                     }
                     /* ecran virtuel */
                     .app__outer-container {
                         position: relative;
                         overflow: hidden;
-                        margin: 25px auto 80px auto;
+                        margin: 25px 0 80px 0;
+                        left: 20%;
                         border-radius: $border-radius;
                         border: 2px solid white;
-                        width: 160px;
-                        height: 293px;
+                        width: 175px;
+                        height: 320px;
                         z-index: 0;
                         text-align: center;
                         @include medium {
+                            margin: 25px auto 80px auto;
                             width: 200px;
                             height: 366px;
                             top: 62px;
@@ -546,7 +555,7 @@ html {
                         .app__bouton-text {
                             position: absolute;
                             top: 225px;
-                            left: 33px;
+                            left: 38px;
                             font-family: $font-2;
                             font-weight: 700;
                             text-transform: uppercase;
@@ -563,8 +572,8 @@ html {
                         }
                         #app__bouton-bouton {
                             position: absolute;
-                            top: 240px;
-                            left: 58px;
+                            top: 250px;
+                            left: 67px;
                             bottom: 0;
                             width: 44px;
                             height: 44px;
@@ -645,7 +654,7 @@ html {
                         }
                         .app__inner-container img {
                             width: auto;
-                            height: 294px;
+                            height: 321px;
                             @include medium {
                                 width: auto;
                                 height: 367px;
@@ -667,8 +676,8 @@ html {
         .app__carousel-indicators {
             margin: 5px 0 0 0;
             position: absolute;
-            top: 200px;
-            right: 5px;
+            top: 190px;
+            right: 20px;
             width: 30px;
             text-align: center;
             z-index: 20;
