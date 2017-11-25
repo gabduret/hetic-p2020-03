@@ -5,20 +5,20 @@ include ../partials/header.pug
 <!-- ACCUEIL -->
 
 <section class="accueil">
-    <div class="accueil__left-contenu">
-        <div class="accueil__titre">
+    <div class="accueil__leftContent">
+        <div class="accueil__leftContenttitre">
             <p>echo look</p>
         </div>
-        <div class="accueil__sous-titre">
+        <div class="accueil__leftContentsousTitre">
             <p>Aime ton look tous les jours</p>
         </div>
-        <div class="accueil__texte">
+        <div class="accueil__leftContenttexte">
             <p>Avec Echo Look, vous allez pouvoir controler votre style chaque matin.
                 <br> Il vous aidera dans votre choix avec une tenue adapté au temps extérieur mais aussi à la tendance du moment
                 pour être toujours plus au top.</p>
         </div>
     </div>
-    <div class="accueil__image">
+    <div class="accueil__rightContent">
         //- <img src="./img/accueil/large-Echo_Look_Accueil.png" alt="">
 
         <img src="../img/accueil/Small-Echo_Look_Accueil.png" srcset="../img/accueil/Small-Echo_Look_Accueil.png 130w, ../img/accueil/Medium-Echo_Look_Accueil.png 180w, ../img/accueil/large-Echo_Look_Accueil.png 256w" sizes="(min-width: 765px) 250px, (min-width: 500px) 200px, 145px" alt="">
@@ -27,7 +27,7 @@ include ../partials/header.pug
     </div>
 </section>
 
-<!-- SCROLL BOUTON -->
+<!-- SCROLL BUTTON -->
 
 <a href="#scroll-destination">
     <section class="scroll">
@@ -35,157 +35,157 @@ include ../partials/header.pug
             <p>decouvrir</p>
         </div>
         //- arrow
-        <section id="scroll-arrow" class="demo">
-            <a href="#scroll-destination">
+        <div class="scrollArrow demo">
+            <a href="#scrollDestination">
                 <span></span>
             </a>
-        </section>
+        </div>
     </section>
 </a>
 
 
 <!-- DECORATION -->
 <section class="decor">
-    <div class="decor-1__inner"></div>
+    <div class="decor__1"></div>
 </section>
 
 
-<!-- ECHO LOOK APP -->
+<!-- ECHO LOOK APPLICATION -->
 
-<section class="app" id="scroll-destination">
-    <!-- app carousel -->
-    <div class="app__carousel" id="app__carousel">
-        <div id="app__slides">
+<section class="application" id="scrollDestination">
+    <!-- application carousel -->
+    <div class="application__carousel" id="application__carousel">
+        <div class="carousel__slides">
             <!-- slide 1 - echo look app -->
-            <div class="app__slide" id="slide-1" style="opacity: 1; display: inline-block;" data-state="active">
-                <div class="app__left-contenu">
-                    <div class="app__titre">
+            <div class="carousel__slide carousel__slide--showing" data-state="active">
+                <div class="carousel__leftContent">
+                    <div class="leftContent__title">
                         <p>echo look app</p>
                     </div>
-                    <div class="app__text">
+                    <div class="leftContent__text">
                         <p>Téléchargez l’application Echo Look, le compagnon essentiel qui vous aidera à choisir vos tenues. Où que vous soyez, chez vous ou à l’hôtel par exemple, votre assistant reste près de vous à tout moment. En plus, c’est un parfait outil d’édition de photo facile d’utilisation. Directement connecté à votre caméra, il vous suffit de demander à Alexa de vous prendre en photo ou en vidéo et vous pouvez voir le résultat dans l’application.</p>
                     </div>
                 </div>
-                <div class="app__right-contenu">
-                    <div class="app__phone-background"></div>
-                    <div class="app__phone-images">
-                        <img class="app__blured-image" src="./img/app/large/Iphone 7_05.png" alt="">
+                <div class="carousel__rightContent">
+                    <div class="rightContent__background"></div>
+                    <div class="rightContent__phoneImage">
+                        <img class="rightContent__bluredImage" src="./img/app/large/Iphone 7_05.png" alt="">
                         <!-- en savoir plus bouton -->
-                        <div class="app__phone-bouton" id="bouton-1">
-                            <div class="bouton-circle"></div>
-                            <div class="bouton-inner"></div>
+                        <div class="rightContent__button">
+                            <div class="button-circle"></div>
+                            <div class="button-inner"></div>
                         </div>
                     </div>
                 </div>
             </div>
             <!-- slide 2 - lookbook personnel -->
-            <div class="app__slide" id="slide-2">
-                <div class="app__left-contenu">
-                    <div class="app__titre">
+            <div class="carousel__slide">
+                <div class="carousel__leftContent">
+                    <div class="leftContent__title">
                         <p>votre lookbook personnel</p>
                     </div>
-                    <div class="app__text">
+                    <div class="leftContent__text">
                         <p>Stockez par la suite vos photos et videos sur votre lookbook personnel, et partagez aussi vos photos et videos sur les réseaux sociaux. Enregistrez vos favoris.</p>
                     </div>
                 </div>
-                <div class="app__right-contenu">
-                    <div class="app__phone-background"></div>
-                    <div class="app__phone-images">
-                        <img class="app__blured-image" src="./img/app/large/Iphone 7_01.png" alt="">
+                <div class="carousel__rightContent">
+                    <div class="rightContent__background"></div>
+                    <div class="rightContent__phoneImage">
+                        <img class="rightContent__bluredImage" src="./img/app/large/Iphone 7_01.png" alt="">
                         <!-- en savoir plus bouton -->
-                        <div class="app__phone-bouton" id="bouton-2">
-                            <div class="bouton-circle"></div>
-                            <div class="bouton-inner"></div>
+                        <div class="rightContent__button">
+                            <div class="button-circle"></div>
+                            <div class="button-inner"></div>
                         </div>
                     </div>
                 </div>
             </div>
             <!-- slide 3 - Style check -->
-            <div class="app__slide" id="slide-3">
-                <div class="app__left-contenu">
-                    <div class="app__titre">
+            <div class="carousel__slide">
+                <div class="carousel__leftContent">
+                    <div class="leftContent__title">
                         <p>style check</p>
                     </div>
-                    <div class="app__text">
+                    <div class="leftContent__text">
                         <p>Style Check permet de garder votre point de vue en utilisant les algorithmes avancés d’intelligence artificielle et des conseils de spécialistes de la mode. Soumettez vos choix de tenues pour trouver les habits qui se marient le mieux en fonction de l'ajustement, de la couleur, du style et des tendances actuelles. Au fil du temps, ces décisions deviennent plus intelligentes grâce à vos commentaires et aux commentaires de notre équipe de spécialistes de la mode expérimentés.</p>
                     </div>
                 </div>
-                <div class="app__right-contenu">
-                    <div class="app__phone-background"></div>
-                    <div class="app__phone-images">
-                        <img class="app__blured-image" src="./img/app/large/Iphone 7_04.png" alt="">
+                <div class="carousel__rightContent">
+                    <div class="rightContent__background"></div>
+                    <div class="rightContent__phoneImage">
+                        <img class="rightContent__bluredImage" src="./img/app/large/Iphone 7_04.png" alt="">
                         <!-- en savoir plus bouton -->
-                        <div class="app__phone-bouton" id="bouton-3">
-                            <div class="bouton-circle"></div>
-                            <div class="bouton-inner"></div>
+                        <div class="rightContent__button">
+                            <div class="button-circle"></div>
+                            <div class="button-inner"></div>
                         </div>
                     </div>
                 </div>
             </div>
             <!-- slide 4 - photo et video -->
-            <div class="app__slide" id="slide-4">
-                <div class="app__left-contenu">
-                    <div class="app__titre">
+            <div class="carousel__slide">
+                <div class="carousel__leftContent">
+                    <div class="leftContent__title">
                         <p>photo et video</p>
                     </div>
-                    <div class="app__text">
+                    <div class="leftContent__text">
                         <p>Communiquer avec votre Echo look grâce à Alexa, prenez facilement des photos intégrales et des vidéos courtes avec une caméra mains libres qui comprend un éclairage LED intégré. De même la caméra de détection de profondeur et le flou de fond basé sur la vision par ordinateur permettent de mettre en avant votre tenue.</p>
                     </div>
                 </div>
-                <div class="app__right-contenu">
-                    <div class="app__phone-background"></div>
-                    <div class="app__phone-images">
-                        <img class="app__blured-image" src="./img/app/large/Iphone 7_02.png" alt="">
+                <div class="carousel__rightContent">
+                    <div class="rightContent__background"></div>
+                    <div class="rightContent__phoneImage">
+                        <img class="rightContent__bluredImage" src="./img/app/large/Iphone 7_02.png" alt="">
                         <!-- en savoir plus bouton -->
-                        <div class="app__phone-bouton" id="bouton-4">
-                            <div class="bouton-circle"></div>
-                            <div class="bouton-inner"></div>
+                        <div class="rightContent__button">
+                            <div class="button-circle"></div>
+                            <div class="button-inner"></div>
                         </div>
                     </div>
                 </div>
             </div>
             <!-- slide 5 - alex votre assistance -->
-            <div class="app__slide" id="slide-5">
-                <div class="app__left-contenu">
-                    <div class="app__titre">
+            <div class="carousel__slide">
+                <div class="carousel__leftContent">
+                    <div class="leftContent__title">
                         <p>alexa, assistance personnel</p>
                     </div>
-                    <div class="app__text">
+                    <div class="leftContent__text">
                         <p>Boosté avec l’intelligence d’Alexa, votre Echo Look vous permet de lire les nouvelles et les livres audio, configurer des alarmes, obtenir des informations sur la circulation et la météo, contrôler les appareils portables intelligents, jouer de la musique et plus encore. Ajoutez aussi de nouvelles fonctionnalités comme Starbucks, Fitbit, NPR et plus encore.</p>
                     </div>
                 </div>
-                <div class="app__right-contenu">
-                    <div class="app__phone-background"></div>
-                    <div class="app__phone-images">
-                        <img class="app__blured-image" src="./img/app/large/Iphone 7_03.png" alt="">
+                <div class="carousel__rightContent">
+                    <div class="rightContent__background"></div>
+                    <div class="rightContent__phoneImage">
+                        <img class="rightContent__bluredImage" src="./img/app/large/Iphone 7_03.png" alt="">
                         <!-- en savoir plus bouton -->
-                        <div class="app__phone-bouton" id="bouton-5">
-                            <div class="bouton-circle"></div>
-                            <div class="bouton-inner"></div>
+                        <div class="rightContent__button">
+                            <div class="button-circle"></div>
+                            <div class="button-inner"></div>
                         </div>
                     </div>
                 </div>
             </div>
             <!-- slide 6 - testez style check -->
-            <div class="app__slide">
-                <div class="app__left-contenu">
-                    <div class="app__titre">
+            <div class="carousel__slide">
+                <div class="carousel__leftContent">
+                    <div class="leftContent__title">
                         <p>testez style check maintenant en cliquant sur «touchez-moi»</p>
                     </div>
-                    <div class="app__text">
+                    <div class="leftContent__text">
                         <p></p>
                     </div>
                 </div>
                 <!-- ecran virtuel -->
-                <div class="app__right-contenu">
-                    <div class="app__outer-container">
-                        <div class="app__inner-container">
-                            <div class="app__bouton-text">
+                <div class="carousel__rightContent">
+                    <div class="rightContent__virtualScreen">
+                        <div class="rightContent__inner">
+                            <div class="rightContent__buttonText">
                                 <p>touchez moi</p>
                             </div>
-                            <div id="app__bouton-bouton">
-                                <div class="last-bouton-circle"></div>
-                                <div class="last-bouton-inner"></div>
+                            <div class="rightContent__triggerButton">
+                                <div class="triggerButton__circle"></div>
+                                <div class="triggerButton__inner"></div>
                             </div>
                             <img src="./img/accueil/gab.png" alt="">
                         </div>
@@ -194,37 +194,31 @@ include ../partials/header.pug
             </div>
         </div>
         <!-- app carousel indicators -->
-        <div class="app__carousel-indicators">
-            <ul class="list">
-                <li class="list__item">
-                    <input class="indicator radio-btn" id="a-opt" name="indicator" data-slide="1" data-state="" checked type="radio" />
-                    <label for="a-opt" class="label"></label>
-                    <div class="check"></div>
+        <div class="carousel__indicators">
+            <ul>
+                <li class="carousel__indicator">
+                    <input class="indicator radio-btn" id="indicator1" name="indicator" data-slide="1" data-state="" checked type="radio" />
+                    <label for="indicator1" class="indicator__label"></label>
                 </li>
-                <li class="list__item">
-                    <input class="indicator radio-btn" id="b-opt" name="indicator" data-slide="2" type="radio" />
-                    <label for="b-opt" class="label"></label>
-                    <div class="check"></div>
+                <li class="carousel__indicator">
+                    <input class="indicator radio-btn" id="indicator2" name="indicator" data-slide="2" type="radio" />
+                    <label for="indicator2" class="indicator__label"></label>
                 </li>
-                <li class="list__item">
-                    <input class="indicator radio-btn" id="c-opt" name="indicator" data-slide="3" type="radio" />
-                    <label for="c-opt" class="label"></label>
-                    <div class="check"></div>
+                <li class="carousel__indicator">
+                    <input class="indicator radio-btn" id="indicator3" name="indicator" data-slide="3" type="radio" />
+                    <label for="indicator3" class="indicator__label"></label>
                 </li>
-                <li class="list__item">
-                    <input class="indicator radio-btn" id="d-opt" name="indicator" data-slide="4" type="radio" />
-                    <label for="d-opt" class="label"></label>
-                    <div class="check"></div>
+                <li class="carousel__indicator">
+                    <input class="indicator radio-btn" id="indicator4" name="indicator" data-slide="4" type="radio" />
+                    <label for="indicator4" class="indicator__label"></label>
                 </li>
-                <li class="list__item">
-                    <input class="indicator radio-btn" id="e-opt" name="indicator" data-slide="5" type="radio" />
-                    <label for="e-opt" class="label"></label>
-                    <div class="check"></div>
+                <li class="carousel__indicator">
+                    <input class="indicator radio-btn" id="indicator5" name="indicator" data-slide="5" type="radio" />
+                    <label for="indicator5" class="indicator__label"></label>
                 </li>
-                <li class="list__item">
-                    <input class="indicator radio-btn" id="f-opt" name="indicator" data-slide="6" type="radio" />
-                    <label for="f-opt" class="label"></label>
-                    <div class="check"></div>
+                <li class="carousel__indicator">
+                    <input class="indicator radio-btn" id="indicator6" name="indicator" data-slide="6" type="radio" />
+                    <label for="indicator6" class="indicator__label"></label>
                 </li>
             </ul>
         </div>
@@ -253,18 +247,18 @@ include ../partials/header.pug
 <!-- VIDEO 360 -->
 
 <section class="video360">
-    <div class="video360__right-contenu">
-        <div class="video360__titre">
+    <div class="video360__rightContent">
+        <div class="video360__title">
             <p>video 360 degrés</p>
         </div>
-        <div class="video360__texte">
+        <div class="video360__text">
             <p>Prenez des photos intégrales ou des vidéos courtes afin que vous puissiez avoir une vue à 360 dégrés de votre tenue. Alexa vous permet de regarder le moindre recoin de votre tenue grace à sa technologie de capture intense.
             <br>    Avec la capture vous ne ratterez aucun détail de votre tenue.</p>
         </div>
     </div>
-    <div class="video360__left-contenu">
-        <div class="video360__outer-container">
-            <div class="video360__inner-container">
+    <div class="video360__leftContent">
+        <div class="leftContent__virtualScreen">
+            <div class="leftContent__inner">
                 <img src="./img/accueil/hallelujah.gif" alt="">
             </div>
         </div>
@@ -273,10 +267,10 @@ include ../partials/header.pug
 
 <!-- LA LA LA -->
 
-<section>
-<div class="la-la-la">
-    <p>la la la</p>
-</div>
-</section>
+//- <section>
+//- <div class="la-la-la">
+//-     <p>la la la</p>
+//- </div>
+//- </section>
 
 include ../partials/footer.pug

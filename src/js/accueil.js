@@ -58,27 +58,25 @@ console.log('Accueil.js fonctionne');
 
 // app carousel v-2
 
-var carousel = document.getElementById('app__carousel');
-var slides = document.getElementsByClassName('app__slide');
+var carousel = document.getElementById('application__carousel');
+var slides = document.getElementsByClassName('carousel__slide');
 var speed = 2100; // 1s = 1400
 
 function carouselHide(num) {
     indicators[num].setAttribute('data-state', '');
     slides[num].setAttribute('data-state', '');
-
-    slides[num].style.opacity=0;
-    slides[num].style.display="none";
+    slides[num].classList.remove('carousel__slide--showing');
+    // slides[num].style.opacity=0;
+    // slides[num].style.display="none";
 }
 
 function carouselShow(num) {
     indicators[num].checked = true;
     indicators[num].setAttribute('data-state', 'active');
     slides[num].setAttribute('data-state', 'active');
-    if(slides[num].querySelector('.app__blured-image-on').classList.remove('.app__blured-image-on'));
-    
-
-    slides[num].style.opacity=1;
-    slides[num].style.display="inline-block";
+    slides[num].classList.add('carousel__slide--showing');
+    // slides[num].style.opacity=1;
+    // slides[num].style.display="inline-block";
 }
 
 function setSlide(slide) {
@@ -120,7 +118,7 @@ function switchSlide() {
 }
 
 if (carousel) {
-    var slides = carousel.querySelectorAll('.app__slide');
+    var slides = carousel.querySelectorAll('.carousel__slide');
     var indicators = carousel.querySelectorAll('.indicator');
 
     // var switcher = setInterval(function() {
@@ -135,33 +133,31 @@ if (carousel) {
 
 
 
-// app carousel en savoir plus bouton
+// Application carousel en savoir plus button
 
 
-//Traditional way
+// Traditional way
 
 // document.getElementById('bouton-1').addEventListener('click', function() {
-//     document.querySelector('#slide-1 .app__blured-image').classList.toggle('app__blured-image-on');
-//     document.querySelector('#slide-1 .app__text').classList.toggle('app__text-mobile-on');
-//     document.querySelector('#slide-1 .app__phone-background').classList.toggle('app__phone-background-on');
+//     document.querySelector('#slide-1 .rightContent__bluredImage').classList.toggle('rightContent__bluredImage-on');
+//     document.querySelector('#slide-1 .leftContent__text').classList.toggle('app__text-mobile-on');
+//     document.querySelector('#slide-1 .rightContent__background').classList.toggle('app__phone-background-on');
 // });
 
 
 
+// Adding class to active slide
 
-
-document.querySelectorAll('.app__slide').forEach(
+document.querySelectorAll('.carousel__slide').forEach(
     function(slide) {
-        var button = slide.querySelector('.app__phone-bouton');
+        var button = slide.querySelector('.rightContent__button');
         if(button){
             button.addEventListener('click', 
             function() {
-                // console.log(slide);
-                console.log('en savoir plus button clicked');
-                // console.log(slide.querySelector('.app__blured-image'));
-                slide.querySelector('.app__blured-image').classList.toggle('app__blured-image-on');
-                slide.querySelector('.app__text').classList.toggle('app__text-mobile-on');
-                slide.querySelector('.app__phone-background').classList.toggle('app__phone-background-on');
+                // console.log('en savoir plus button clicked');
+                slide.querySelector('.rightContent__bluredImage').classList.toggle('rightContent__bluredImage--on');
+                slide.querySelector('.leftContent__text').classList.toggle('leftContent__text--on');
+                slide.querySelector('.rightContent__background').classList.toggle('rightContent__background--on');
                 }
             );
         }
@@ -169,3 +165,22 @@ document.querySelectorAll('.app__slide').forEach(
 );
 
 
+// Pull out class from deactivated slide
+
+document.querySelectorAll('.carousel__indicator').forEach(
+    function(turnOff) {
+        var indicator = turnOff.querySelector('.indicator__label');
+        if(indicator){
+            indicator.addEventListener('click', 
+            function() {document.querySelectorAll('.carousel__slide').forEach(
+                function(slide) {
+                            slide.querySelector('.rightContent__bluredImage').classList.remove('rightContent__bluredImage--on');
+                            slide.querySelector('.leftContent__text').classList.remove('leftContent__text--on');
+                            slide.querySelector('.rightContent__background').classList.remove('rightContent__background--on');
+                }
+            );
+                }
+            );
+        }
+    }
+);

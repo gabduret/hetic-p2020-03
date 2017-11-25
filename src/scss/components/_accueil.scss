@@ -38,7 +38,7 @@ html {
         margin: 30px 0 0 $margin-left-3;
     }
     /* accueil left contenu */
-    .accueil__left-contenu{
+    .accueil__leftContent{
         display: inline-block;
         position: relative;
         width: 60%;
@@ -49,7 +49,7 @@ html {
             width: 55%;
         }
         /* accueil titre */
-        .accueil__titre {
+        .accueil__leftContenttitre {
             color: $white;
             font-weight: 700;
             font-size: $title-2;
@@ -66,7 +66,7 @@ html {
             }
         }
         /* accueil sous-titre */
-        .accueil__sous-titre {
+        .accueil__leftContentsousTitre {
             color: $main-color;
             width: 95%;
             font-size: $subtitle-2;
@@ -82,7 +82,7 @@ html {
             }
         }
         /* accueil texte */
-        .accueil__texte {
+        .accueil__leftContenttexte {
             color: $white;
             font-size: $text-3;
             line-height: $line-height-text;
@@ -99,7 +99,7 @@ html {
             }
         }
     }
-    .accueil__image {
+    .accueil__rightContent {
         position: relative;
         float: right;
         width: 40%;
@@ -117,7 +117,7 @@ html {
         }
     }
     /* App image gradient */
-    .accueil__image::after {
+    .accueil__rightContent::after {
         margin: 220px 0 0 -58px;
         display: inline-block;
         left: 0;
@@ -140,7 +140,7 @@ html {
             background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, #111111 50%);
         }
     }
-    .accueil__image img{
+    .accueil__rightContent img{
         position: absolute;
         left: -30px;
         // height: 380px;
@@ -163,7 +163,7 @@ html {
 /*****************/
 
 
-/* SCROLL BOUTON */
+/* SCROLL BUTTON */
 
 
 /*****************/
@@ -208,11 +208,11 @@ html {
             opacity: 0.5;
         }
     }
-    #scroll-arrow a {
+    .scrollArrow a {
         padding-top: 60px;
     }
     /* scroll animation */
-    #scroll-arrow a span {
+    .scrollArrow span {
         position: absolute;
         width: 10px;
         height: 10px;
@@ -259,7 +259,7 @@ html {
 /*****************/
 
 .decor{
-    .decor-1__inner{
+    .decor__1{
         position: absolute;
         top: 1300px;
         left: 0;
@@ -281,7 +281,7 @@ html {
 
 /*****************/
 
-.app {
+.application {
     margin: 100px 0 0 0;
     position: relative;
     @include medium {
@@ -291,12 +291,12 @@ html {
         margin: 100px 0 0 $margin-left-3;
     }
     /* app carousel */
-    .app__carousel {
+    .application__carousel {
         overflow: hidden;
-        #app__slides {
+        .carousel__slides {
             position: relative;
             list-style-type: none;
-            height: 575px;
+            height: 585px;
             @include medium {
                 height: 580px;
             }
@@ -304,7 +304,7 @@ html {
                 height: 660px;
             }
             /* each slide */
-            .app__slide {
+            .carousel__slide {
                 display: none;
                 position: absolute;
                 width: 100%;
@@ -314,8 +314,8 @@ html {
                 -moz-transition: opacity 1s;
                 -o-transition: opacity 1s;
                 transition: opacity 1s;
-                /* left contenu */
-                .app__left-contenu {
+                /* left content */
+                .carousel__leftContent {
                     position: relative;
                     @include medium {
                         position: relative;
@@ -332,7 +332,7 @@ html {
                         width: 60%;
                     }
                     /* titre */
-                    .app__titre {
+                    .leftContent__title {
                         position: relative;
                         color: $main-color;
                         font-weight: 700;
@@ -340,7 +340,7 @@ html {
                         line-height: $line-height-sous-titre-mobile;
                         z-index: 5;
                         text-transform: uppercase;
-                        margin: $margin-top-6 5px 0 30px;
+                        margin: $margin-top-5 15px 0 30px;
                         @include medium {
                             float: left;
                             width: 90%;
@@ -356,7 +356,7 @@ html {
                         }
                     }
                     /* texte */
-                    .app__text {
+                    .leftContent__text {
                         margin: 20px auto 0 auto;
                         left: 10.8%;
                         width: 205px;
@@ -383,12 +383,12 @@ html {
                             width: 80%;
                         }
                     }
-                    .app__text-mobile-on {
+                    .leftContent__text--on {
                         display: block;
                     }
                 }
-                /* right contenu */
-                .app__right-contenu {
+                /* right content */
+                .carousel__rightContent {
                     margin: 0 0 0 0;
                     position: relative;
                     @include medium {
@@ -407,7 +407,7 @@ html {
                         right: 10%;
                     }
                     /* phone background */
-                    .app__phone-background {
+                    .rightContent__background {
                         display: none;
                         margin: 0 auto 0 0;
                         position: absolute;
@@ -424,18 +424,18 @@ html {
                             display: none;
                         }
                     }
-                    .app__phone-background-on {
+                    .rightContent__background--on {
                         display: block;
                         @include medium {
                         display: none;
                         }
                     }
                     /* phone images */
-                    .app__phone-images {
+                    .rightContent__phoneImage {
                         margin: 15px 0 0 0;
                         position: relative;
-                        /* en savoir plus bouton */
-                        .app__phone-bouton {
+                        /* en savoir plus button */
+                        .rightContent__button {
                             margin: 0 auto 0 auto;
                             position: relative;
                             width: 44px;
@@ -447,12 +447,12 @@ html {
                                 display: none;
                             }
                         }
-                        .app__phone-bouton a {
+                        .rightContent__button a {
                             text-decoration: none;
                         }
-                        /* bouton animation */
-                        .app__phone-bouton .bouton-inner {
-                            animation: 0.2s ease-in-out 0s normal none infinite running bouton-inner-anim;
+                        /* button animation */
+                        .rightContent__button .button-inner {
+                            animation: 0.2s ease-in-out 0s normal none infinite running button-inner-anim;
                             background: $main-color;
                             border: 2px solid transparent;
                             border-radius: 100%;
@@ -464,8 +464,8 @@ html {
                             width: 20px;
                             background-color: $main-color;
                         }
-                        .app__phone-bouton .bouton-circle {
-                            animation: 1.5s linear 0s normal none infinite running bouton-circle-anim !important;
+                        .rightContent__button .button-circle {
+                            animation: 1.5s linear 0s normal none infinite running button-circle-anim !important;
                             background-color: transparent;
                             border: 2px solid $main-color;
                             border-radius: 100%;
@@ -475,7 +475,7 @@ html {
                             width: 100%;
                             border-color: $main-color;
                         }
-                        @-webkit-keyframes bouton-circle-anim {
+                        @-webkit-keyframes button-circle-anim {
                             0% {
                                 opacity: 0.1;
                                 transform: rotate(0deg) scale(0.5) skew(1deg);
@@ -489,7 +489,7 @@ html {
                                 transform: rotate(0deg) scale(1) skew(1deg);
                             }
                         }
-                        @keyframes bouton-circle-anim {
+                        @keyframes button-circle-anim {
                             0% {
                                 opacity: 0.1;
                                 transform: rotate(0deg) scale(0.5) skew(1deg);
@@ -504,10 +504,10 @@ html {
                             }
                         }
                     }
-                    .app__phone-images {
+                    .rightContent__phoneImage {
                         left: 8%;
                         width: 225px;
-                        .app__blured-image {
+                        .rightContent__bluredImage {
                         height: 435px;
                         width: auto;
                         // filter: blur(0px);
@@ -522,7 +522,7 @@ html {
                                 filter: none;
                             }
                         }
-                        .app__blured-image-on{
+                        .rightContent__bluredImage--on{
                             filter: blur(10px);
                             @include medium {
                                 filter: blur(0px);
@@ -530,8 +530,8 @@ html {
                         }
                     }
                     /* ecran virtuel */
-                    .app__outer-container {
-                        position: relative;
+                    .rightContent__virtualScreen {
+                        position: absolute;
                         overflow: hidden;
                         margin: 25px 0 80px 0;
                         left: 20%;
@@ -552,7 +552,7 @@ html {
                             height: 458px;
                             top: 82px;
                         }
-                        .app__bouton-text {
+                        .rightContent__buttonText {
                             position: absolute;
                             top: 225px;
                             left: 38px;
@@ -570,7 +570,7 @@ html {
                                 left: 75px;
                             }
                         }
-                        #app__bouton-bouton {
+                        .rightContent__triggerButton {
                             position: absolute;
                             top: 250px;
                             left: 67px;
@@ -588,13 +588,13 @@ html {
                                 left: 105px;
                             }
                         }
-                        #app__bouton-bouton a {
+                        .rightContent__triggerButton a {
                             text-decoration: none;
                         }
                         /* bouton animation */
-                        #app__bouton-bouton {
+                        .rightContent__triggerButton {
                             cursor: pointer;
-                            .last-bouton-inner {
+                            .triggerButton__inner {
                                 animation: 0.2s ease-in-out 0s normal none infinite running bouton-inner-anim;
                                 background: $main-color;
                                 border: 2px solid transparent;
@@ -607,7 +607,7 @@ html {
                                 width: 20px;
                                 background-color: $main-color;
                             }
-                            .last-bouton-circle {
+                            .triggerButton__circle {
                                 animation: 1.5s linear 0s normal none infinite running bouton-circle-anim !important;
                                 background-color: transparent;
                                 border: 2px solid $main-color;
@@ -647,12 +647,12 @@ html {
                                 }
                             }
                         }
-                        .app__inner-container {
+                        .rightContent__inner {
                             position: absolute;
                             overflow-x: hidden;
                             overflow-y: scroll;
                         }
-                        .app__inner-container img {
+                        .rightContent__inner img {
                             width: auto;
                             height: 321px;
                             @include medium {
@@ -667,13 +667,14 @@ html {
                     }
                 }
             }
-            // .showing {
-            //     opacity: 1;
-            //     z-index: 2;
-            // }
+
+            .carousel__slide--showing {
+                opacity: 1;
+                display: inline-block;
+            }
         }
         /* app carousel indicators */
-        .app__carousel-indicators {
+        .carousel__indicators {
             margin: 5px 0 0 0;
             position: absolute;
             top: 190px;
@@ -693,11 +694,11 @@ html {
                 right: 24%;
                 margin: 20px 0 0 -140px;
             }
-            .list__item {
+            .carousel__indicator {
                 display: inline-block;
                 position: relative;
                 height: 30px;
-                &:hover .label {
+                &:hover .indicator__label {
                     color: $main-color;
                     &::before {
                         border: 3px solid $main-color;
@@ -705,7 +706,7 @@ html {
                 }
                 .radio-btn {
                     display: none;
-                    &:checked + .label {
+                    &:checked + .indicator__label {
                         color: $main-color;
                         &::before {
                             border: 3px solid $main-color;
@@ -718,7 +719,7 @@ html {
                     margin: 4px 2px;
                     cursor: pointer;
                 }
-                .label {
+                .indicator__label {
                     display: flex;
                     padding: 0 3px;
                     cursor: pointer;
@@ -727,7 +728,7 @@ html {
                         padding: 0 3px;
                     }
                 }
-                .label::before {
+                .indicator__label::before {
                     height: 18px;
                     width: 18px;
                     content: "";
@@ -764,7 +765,7 @@ html {
         margin: 120px 0 0 $margin-left-3;
     }
     /* right contenu */
-    .video360__right-contenu {
+    .video360__rightContent {
         @include medium {
             margin: 30px 0 0 $margin-left-4;
             float: right;
@@ -774,7 +775,7 @@ html {
             margin: 30px 0 0 $margin-left-3;
         }
         /* video360 titre */
-        .video360__titre {
+        .video360__title {
             color: $main-color;
             font-weight: 700;
             font-size: $subtitle-1;
@@ -793,11 +794,11 @@ html {
             }
         }
         /* video360 texte */
-        .video360__texte {
+        .video360__text {
             color: $white;
             font-size: $text-3;
             line-height: $line-height-text;
-            margin: $margin-top-6 10px 0 30px;
+            margin: $margin-top-6 15px 0 30px;
             @include medium {
                 margin: $margin-top-6 10px 0 0;
                 font-size: $text-3;
@@ -812,14 +813,14 @@ html {
     }
     /* bouton */
     /* ecran virtuel */
-    .video360__left-contenu {
+    .video360__leftContent {
         @include medium {
             width: 40%;
         }
         @include large {
             width: 40%;
         }
-        .video360__outer-container {
+        .leftContent__virtualScreen {
             position: relative;
             overflow: hidden;
             margin: 25px auto 80px auto;
@@ -842,13 +843,13 @@ html {
                 height: 458px;
                 left: 20%;
             }
-            .video360__inner-container {
+            .leftContent__inner {
                 position: absolute;
                 left: 0;
                 overflow-x: hidden;
                 overflow-y: scroll;
             }
-            .video360__inner-container img {
+            .leftContent__inner img {
                 width: auto;
                 height: 294px;
                 @include medium {
@@ -873,6 +874,6 @@ html {
 
 /*************/
 
-.la-la-la {
-    position: relative;
-}
+// .la-la-la {
+//     position: relative;
+// }
