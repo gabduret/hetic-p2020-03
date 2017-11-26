@@ -1,0 +1,131 @@
+/*************/
+
+
+/* VIDEO 360 */
+
+
+/*************/
+
+.video360 {
+  position: relative;
+  margin: 50px 0 0 0;
+  
+  @include medium {
+    margin: 100px 0 0 30px;
+  }
+  
+  @include large {
+    margin: 120px 0 0 $margin-left-3;
+  }
+}
+
+.video360__rightContent {
+  @include medium {
+    margin: 30px 0 0 $margin-left-4;
+    float: right;
+    width: 60%;
+  }
+  
+  @include large {
+    margin: 30px 0 0 $margin-left-3;
+  }
+}
+
+.video360__title {
+  color: $main-color;
+  font-weight: 700;
+  font-size: $subtitle-1;
+  line-height: $line-height-sous-titre-mobile;
+  z-index: 5;
+  text-transform: uppercase;
+  margin: $margin-top-6 0 0 30px;
+
+  @include medium {
+    font-size: $subtitle-1;
+    margin: $margin-top-6 0 0 0;
+  }
+
+  @include large {
+    font-size: $title-2;
+    line-height: $line-height-sous-titre-desktop;
+    margin: $margin-top-6 0 0 0;
+  }
+}
+  
+.video360__text {
+  color: $white;
+  font-size: $text-3;
+  line-height: $line-height-text;
+  margin: $margin-top-6 15px 0 30px;
+
+  @include medium {
+    margin: $margin-top-6 10px 0 0;
+    font-size: $text-3;
+    width: 75%;
+  }
+
+  @include large {
+    margin: $margin-top-6 10px 0 0;
+    font-size: $text-2;
+    width: 75%;
+  }
+}
+
+.video360__leftContent {
+  @include medium {
+    width: 40%;
+  }
+   
+  @include large {
+    width: 40%;
+  }
+}
+
+.leftContent__virtualScreen {
+  position: relative;
+  overflow: hidden;
+  margin: 25px auto 80px auto;
+  border-radius: $border-radius;
+  border: 2px solid white;
+  width: 160px;
+  height: 293px;
+  z-index: 0;
+
+  @include medium {
+    display: inline-block;
+    margin: 0 0 80px 0;
+    width: 200px;
+    height: 366px;
+    left: 15%;
+  }
+  
+  @include large {
+    display: inline-block;
+    margin: auto 0 80px 0;
+    width: 250px;
+    height: 458px;
+    left: 20%;
+  }
+}
+
+.leftContent__inner {
+  position: absolute;
+  left: 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  
+  video {
+    width: auto;
+    height: 294px;
+    
+    @include medium {
+      width: auto;
+      height: 367px;
+    }
+
+    @include large {
+      width: auto;
+      height: 459px;
+    }
+  }
+}
