@@ -68,6 +68,10 @@ table {
           width: 80%;
         }
       }
+      
+      ul:nth-of-type(3){
+        margin-bottom: $margin-top-5;
+      }
     }
   }
 }
