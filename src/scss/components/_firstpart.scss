@@ -1,24 +1,4 @@
 /*
- * Header test direction
- */
-
-#fixedHeader {
-  position: fixed;
-  padding: 20px;
-  font-size: $title-2;
-  background: #3C3C3A;
-  transition: all 0.5s ease-in-out;
-  will-change:transform, opacity;
-}
-.fixed-header-down {
-  transform: translateY(-40px);
-  opacity: 0;
-}
-#direction {
-  position: fixed;
-}
-
-/*
  * Navigation
  */
 

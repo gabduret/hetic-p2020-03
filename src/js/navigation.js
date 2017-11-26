@@ -5,7 +5,7 @@ import SmoothScroll from 'smooth-scroll'
  * Variables
  * init variables
  */
-const anchors = ['discover', 'table', 'footer']
+const anchors = ['discover', 'table', 'purchase']
 const header_item = document.getElementById('fixedHeader')
 const nav_items = document.querySelectorAll('.navigation__content')
 
@@ -21,30 +21,28 @@ let prev_active_point = nav_one
  * > scroll detection on the whole page
  */
 
-var waypoint = new Waypoint({
-  element: document.getElementById('direction'),
-  handler: (direction) => {
-    if (direction == 'down') {
-      console.log('Direction: ' + direction);
-      header_item.classList.add('fixed-header-down')
-      header_item.classList.remove('test')
-    }
-    else {
-      console.log('up')
-      header_item.classList.add('test')
-      header_item.classList.remove('fixed-header-down')
-    }
-  }
-})
+// var waypoint = new Waypoint({
+//   element: document.getElementById('direction'),
+//   handler: (direction) => {
+//     if (direction == 'down') {
+//       console.log('Direction: ' + direction);
+//       header_item.classList.add('fixed-header-down')
+//       header_item.classList.remove('test')
+//     }
+//     else {
+//       console.log('up')
+//       header_item.classList.add('test')
+//       header_item.classList.remove('fixed-header-down')
+//     }
+//   }
+// })
 
 /*
  * NAVIGATION
  * smoothscroll
  * state : done
  */
-
 var scroll = new SmoothScroll();
-
 
 /*
  * NAVIGATION
@@ -59,7 +57,6 @@ for(let i = 0; i < nav_items.length; i++) {
         const targetElement = document.getElementById(target)
         // location.href = "#" + anchors[i];
         scroll.animateScroll( targetElement )
-        console.log('target')
     }
     else {
         if(event.target.classList.contains('navigation__points')) {            
@@ -79,7 +76,6 @@ var waypoint = new Waypoint({
   element: document.getElementById(anchors[0]),
   handler: (direction) => {
     if (prev_active_point != nav_one) {
-      console.log("it's ok : 1")
       nav_one.classList.add('navigation__points--active')
       prev_active_point.classList.remove('navigation__points--active')
       prev_active_point = nav_one
@@ -95,7 +91,6 @@ var waypoint = new Waypoint({
   element: document.getElementById(anchors[1]),
   handler: (direction) => {
     if (prev_active_point != nav_two) {
-      console.log("it's ok : 2")
       nav_two.classList.add('navigation__points--active')
       prev_active_point.classList.remove('navigation__points--active')
       prev_active_point = nav_two
@@ -111,7 +106,6 @@ var waypoint = new Waypoint({
   element: document.getElementById(anchors[2]),
   handler: (direction) => {
     if (prev_active_point != nav_three) {
-      console.log("it's ok : 3")
       nav_three.classList.add('navigation__points--active')
       prev_active_point.classList.remove('navigation__points--active')
       prev_active_point = nav_three
