@@ -1,4 +1,4 @@
-#Echo Look
+# Echo Look
 > This is a school project based on the Echo look product of Amazon. [Link](https://www.amazon.com/Amazon-Echo-Look-Camera-Style-Assistant/dp/B0186JAEWK).
 
 [See the demo](https://echolook.netlify.com)
