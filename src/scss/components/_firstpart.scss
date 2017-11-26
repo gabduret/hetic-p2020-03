@@ -98,9 +98,6 @@
  * Content style test
  */
 
-.first-element {
-  margin-top: 100px;
-}
 .squares div {
   width: 300px;
   height: 300px;
@@ -109,6 +106,7 @@
   background: $black;
 }
 .squares {
+  margin-top: 100px;
   overflow-y: scroll;
   scroll-behavior: smooth;
 }

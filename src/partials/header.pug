@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Echo look</title>
+    <title>Echo Look</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
@@ -9,13 +10,15 @@
   <body>
 
     <header class="header">
-     <img src="./img/logo.png" class="logo-header">
-  <input class="menu-btn" type="checkbox" id="menu-btn" />
-  <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
-  <ul class="menu">
-    <li><a href="#">Présentation</a></li>
-    <li><a href="#">Caractéristiques techniques</a></li>
-    <li><a href="#">Prix</a></li>
-    <li><button class="button-commander"><a href="#work">Commander</a></button></li>
-  </ul>
-</header>
+      <img class="header__logo" src="./img/logo.png">
+      <input class="header__buttonMenu" type="checkbox" id="header__buttonMenu" />
+      <label class="menu-icon header__menuIcon" for="header__buttonMenu">
+        <span class="menuIcon__navicon"></span>
+      </label>
+      <ul class="header__menu">
+        <li><a href="#">Présentation</a></li>
+        <li><a href="#">Caractéristiques techniques</a></li>
+        <li><a href="#">Prix</a></li>
+        <li><button class="header__menuCommand"><a href="#work">Commander</a></button></li>
+      </ul>
+    </header>

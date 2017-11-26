@@ -1,5 +1,7 @@
 #Echo Look
-> This is a school project based on the Echo look product of Amazon. [Link] (https://www.amazon.com/Amazon-Echo-Look-Camera-Style-Assistant/dp/B0186JAEWK)
+> This is a school project based on the Echo look product of Amazon. [Link](https://www.amazon.com/Amazon-Echo-Look-Camera-Style-Assistant/dp/B0186JAEWK).
+
+[See the demo](https://echolook.netlify.com)
 
 ## Getting started
 ### Requirements
@@ -21,16 +23,20 @@ yarn install
 
 ### Usage
 #### Development
-Running ```yarn run dev``` will launch browser sync and allow you to visit your website on ``` http://localhost:3000/```
+> Running ```yarn run dev``` will launch browser sync and allow you to visit your website on ``` http://localhost:3000/```
 #### Production
-Running ```yarn run build``` will generate productions files in the ```/dist``` folder, which you can then serve for production.
+> Running ```yarn run build``` will generate productions files in the ```/dist``` folder, which you can then serve for production.
 
 ## Tech stack
 * SCSS with BEM naming convention
 
-## Credits
+## Other
+### Credits
 * [Gabriel Duret](https://github.com/gabduret)
-* [Marie-Elise Haddad] (https://github.com/Marie-Elise)
-* [Quang Tuyen Dinh] (https://github.com/Quang-Tuyen-DINH)
-* [Bérangère Martin] (https://github.com/BerangereHetic)
-* [Kenrig Dalle] (https://github.com/DalleKenrig)
+* [Marie-Elise Haddad](https://github.com/Marie-Elise)
+* [Quang Tuyen Dinh](https://github.com/Quang-Tuyen-DINH)
+* [Bérangère Martin](https://github.com/BerangereHetic)
+* [Kenrig Dalle](https://github.com/DalleKenrig)
+
+### Licence
+This repository is under MIT Licence.
