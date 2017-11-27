@@ -1,2 +1,3 @@
 import './navigation'
-import './accueil'
+import './application'
+import './video360'
