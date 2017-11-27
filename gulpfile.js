@@ -1,5 +1,5 @@
 var babelify = require('babelify');
-var browserify = require('browserify')
+var browserify = require('browserify');
 var buffer = require('vinyl-buffer');
 var concat = require('gulp-concat');
 var del = require('del');
