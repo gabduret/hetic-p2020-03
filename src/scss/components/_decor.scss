@@ -1,0 +1,22 @@
+
+/*****************/
+
+
+/* DECORATION */
+
+
+/*****************/
+
+.decor{
+  .decor__1{
+    position: absolute;
+    top: 1300px;
+    left: 0;
+    width: 100%;
+    height: 430px;
+    transform: skewY(-40deg);
+    background: $white;
+    opacity: 0.1;
+    z-index: 0;
+  }
+}

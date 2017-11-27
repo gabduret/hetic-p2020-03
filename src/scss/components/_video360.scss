@@ -1,0 +1,142 @@
+/*************/
+
+
+/* VIDEO 360 */
+
+
+/*************/
+
+.video360 {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-start;
+  align-items: center;
+  
+  @include medium {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}
+
+.video360__rightContent {
+  margin-bottom: $margin-top-5;
+  width: 90%;
+  
+  @include medium {
+    width: 60%;
+    margin-left: $margin-left-1;
+  }
+}
+
+.video360__title {
+  color: $main-color;
+  font-weight: 700;
+  font-size: $subtitle-1;
+  line-height: $line-height-sous-titre-mobile;
+  z-index: 5;
+  text-transform: uppercase;
+  margin: $margin-top-6 0 0 30px;
+
+  @include medium {
+    font-size: $subtitle-1;
+    margin: $margin-top-6 0 0 0;
+  }
+
+  @include large {
+    font-size: $title-2;
+    line-height: $line-height-sous-titre-desktop;
+    margin: $margin-top-6 0 0 0;
+  }
+}
+  
+.video360__text {
+  color: $white;
+  font-size: $text-3;
+  line-height: $line-height-text;
+  margin: $margin-top-6 15px 0 30px;
+
+  @include medium {
+    margin: $margin-top-6 10px 0 0;
+    font-size: $text-3;
+    width: 75%;
+  }
+
+  @include large {
+    margin: $margin-top-6 10px 0 0;
+    font-size: $text-2;
+    width: 75%;
+  }
+}
+
+.video360__leftContent {
+  position: relative;
+  overflow: hidden;
+  border-radius: $border-radius;
+  border: 2px solid white;
+  width: 160px;
+  height: 293px;
+
+  @include medium {
+    margin-left: $margin-left-2;
+    width: 200px;
+    height: 366px;
+  }
+  
+  @include large {
+    width: 250px;
+    height: 458px;
+  }
+}
+
+.video360__leftContent__inner {
+  display: flex;
+  justify-content: center;
+  
+  video {
+    width: auto;
+    height: 294px;
+    
+    @include medium {
+      width: auto;
+      height: 367px;
+    }
+
+    @include large {
+      width: auto;
+      height: 459px;
+    }
+  }
+}
+
+.video360__leftContent__player{
+  position: relative;
+  width: 160px;
+  bottom : 40px;
+}
+
+.video360__leftContent__playerBar{
+  position: absolute;
+  width: 160px;
+  height: 2px;
+  background: white;
+  z-index: 2;
+  
+  @include medium {
+    width: 200px;
+  }
+  
+  @include large {
+    width: 250px;
+  }
+}
+
+.video360__leftContent__playerButton{
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: -10px;
+  border-radius: 10px;
+  background: $main-color;
+  z-index: 3;
+}
