@@ -1,0 +1,60 @@
+
+/*
+ * Specifications part
+ */
+
+.specifications {
+  padding-top: 100px;
+  display: flex;
+}
+
+.specifications__content {
+  width: 70%;
+  position: relative;
+}
+
+.specifications__contentItem {
+  position: absolute;
+  max-width: 70%;
+  margin: auto;
+}
+
+.contentItem__title {
+  font-size: $text-2;
+  line-height: 19px;
+}
+.contentItem__text {
+  font-weight: 400;
+  font-size: $text-3;
+  line-height: 16px;
+}
+
+.specifications__echolook {
+  position: relative;
+  overflow: hidden;
+  width: 30%;
+  height: 600px;
+
+  img {
+      position: absolute;
+      top: 0;
+      right: -80px;
+  }
+}
+
+/*
+ * Items
+ */
+
+.specifications__itemOne {
+  top: 120px;
+  left: 10%;
+}
+.specifications__itemTwo {
+  top: 300px;
+  left: 10%;
+}
+.specifications__itemThree {
+  top: 420px;
+  left: 10%;
+}
