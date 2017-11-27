@@ -7,27 +7,25 @@
 /*************/
 
 .video360 {
-  position: relative;
-  margin: 50px 0 0 0;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-start;
+  align-items: center;
   
   @include medium {
-    margin: 100px 0 0 30px;
-  }
-  
-  @include large {
-    margin: 120px 0 0 $margin-left-3;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
   }
 }
 
 .video360__rightContent {
-  @include medium {
-    margin: 30px 0 0 $margin-left-4;
-    float: right;
-    width: 60%;
-  }
+  margin-bottom: $margin-top-5;
+  width: 90%;
   
-  @include large {
-    margin: 30px 0 0 $margin-left-3;
+  @include medium {
+    width: 60%;
+    margin-left: $margin-left-1;
   }
 }
 
@@ -72,47 +70,28 @@
 }
 
 .video360__leftContent {
-  @include medium {
-    width: 40%;
-  }
-   
-  @include large {
-    width: 40%;
-  }
-}
-
-.leftContent__virtualScreen {
   position: relative;
   overflow: hidden;
-  margin: 25px auto 80px auto;
   border-radius: $border-radius;
   border: 2px solid white;
   width: 160px;
   height: 293px;
-  z-index: 0;
 
   @include medium {
-    display: inline-block;
-    margin: 0 0 80px 0;
+    margin-left: $margin-left-2;
     width: 200px;
     height: 366px;
-    left: 15%;
   }
   
   @include large {
-    display: inline-block;
-    margin: auto 0 80px 0;
     width: 250px;
     height: 458px;
-    left: 20%;
   }
 }
 
-.leftContent__inner {
-  position: absolute;
-  left: 0;
-  overflow-x: hidden;
-  overflow-y: scroll;
+.video360__leftContent__inner {
+  display: flex;
+  justify-content: center;
   
   video {
     width: auto;
@@ -128,4 +107,36 @@
       height: 459px;
     }
   }
+}
+
+.video360__leftContent__player{
+  position: relative;
+  width: 160px;
+  bottom : 40px;
+}
+
+.video360__leftContent__playerBar{
+  position: absolute;
+  width: 160px;
+  height: 2px;
+  background: white;
+  z-index: 2;
+  
+  @include medium {
+    width: 200px;
+  }
+  
+  @include large {
+    width: 250px;
+  }
+}
+
+.video360__leftContent__playerButton{
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: -10px;
+  border-radius: 10px;
+  background: $main-color;
+  z-index: 3;
 }
