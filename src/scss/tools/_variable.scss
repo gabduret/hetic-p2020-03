@@ -75,3 +75,17 @@ $large: 1200px;
 // Navigation
 $points-size-px: 12px;
 $points-size: 12;
+
+
+// Mixins
+@mixin medium {
+  @media (min-width: #{$medium}) {
+      @content;
+  }
+}
+
+@mixin large {
+  @media (min-width: #{$large}) {
+      @content;
+  }
+}

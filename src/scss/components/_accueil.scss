@@ -6,19 +6,6 @@ html {
   background-color: $black;
 }
 
-@mixin medium {
-  @media (min-width: #{$medium}) {
-    @content;
-  }
-}
-
-@mixin large {
-  @media (min-width: #{$large}) {
-    @content;
-  }
-}
-
-
 /***********/
 
 

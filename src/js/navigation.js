@@ -5,13 +5,14 @@ import SmoothScroll from 'smooth-scroll'
  * Variables
  * init variables
  */
-const anchors = ['discover', 'table', 'purchase']
+const anchors = ['discover', '360', 'specifications', 'gallery']
 const header_item = document.getElementById('fixedHeader')
 const nav_items = document.querySelectorAll('.navigation__content')
 
 const nav_one = document.getElementById(anchors[0] + 'Point')
 const nav_two = document.getElementById(anchors[1] + 'Point')
 const nav_three = document.getElementById(anchors[2] + 'Point')
+const nav_four = document.getElementById(anchors[3] + 'Point')
 let prev_active_point = nav_one
 
 /*
@@ -109,6 +110,21 @@ var waypoint = new Waypoint({
       nav_three.classList.add('navigation__points--active')
       prev_active_point.classList.remove('navigation__points--active')
       prev_active_point = nav_three
+    }
+  }
+})
+/*
+ * NAVIGATION
+ * Part 4
+ * state : done
+ */ 
+var waypoint = new Waypoint({
+  element: document.getElementById(anchors[3]),
+  handler: (direction) => {
+    if (prev_active_point != nav_four) {
+      nav_four.classList.add('navigation__points--active')
+      prev_active_point.classList.remove('navigation__points--active')
+      prev_active_point = nav_four
     }
   }
 })
