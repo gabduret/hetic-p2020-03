@@ -16,29 +16,6 @@ const nav_four = document.getElementById(anchors[3] + 'Point')
 let prev_active_point = nav_one
 
 /*
- * HEADER
- * Scroll Direction
- * state : in progress
- * > scroll detection on the whole page
- */
-
-// var waypoint = new Waypoint({
-//   element: document.getElementById('direction'),
-//   handler: (direction) => {
-//     if (direction == 'down') {
-//       console.log('Direction: ' + direction);
-//       header_item.classList.add('fixed-header-down')
-//       header_item.classList.remove('test')
-//     }
-//     else {
-//       console.log('up')
-//       header_item.classList.add('test')
-//       header_item.classList.remove('fixed-header-down')
-//     }
-//   }
-// })
-
-/*
  * NAVIGATION
  * smoothscroll
  * state : done
@@ -67,6 +44,12 @@ for(let i = 0; i < nav_items.length; i++) {
     }
   })
 }
+
+
+
+
+
+
 
 /*
  * NAVIGATION
