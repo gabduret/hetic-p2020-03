@@ -1,0 +1,145 @@
+.specifications .specificationsLarge {
+  display: none;
+  padding-top: 100px;
+
+  @include medium {
+    display: flex;
+  }
+}
+.specifications .specificationsOne,
+.specifications .specificationsTwo {
+
+  @include medium {
+    display: none;
+  }
+}
+
+/*
+ * Specifications part
+ */
+
+.specifications > div {
+  padding-top: 100px;
+  display: flex;
+}
+
+.specifications__content {
+  width: 50%;
+  position: relative;
+}
+
+.specifications__contentItem {
+  position: absolute;
+  max-width: 90%;
+  margin: auto;
+  left: 18%;
+
+  @include medium {
+    left: -12%;
+    max-width: 65%;
+  }
+}
+.specifications__contentLeft .specifications__contentItem {
+  right: -70%;
+}
+
+.contentItem__title {
+  font-size: $text-2;
+  line-height: 19px;
+}
+.contentItem__text {
+  font-weight: 400;
+  font-size: $text-3;
+  line-height: 16px;
+}
+
+.specifications__echolook {
+  position: relative;
+  overflow: hidden;
+  width: 50%;
+  height: 500px;
+
+  img {
+      width: 600px;
+      position: absolute;
+      top: 0;
+      right: -300px;
+
+      @include medium {
+        right: 0;
+        width: 100%;
+      }
+  }
+
+  @include medium {
+    width: 100%;
+    height: 40vw;
+    overflow: inherit;
+  }
+}
+.specificationsTwo {
+  padding-top: 0;
+
+  .specifications__contentItem {
+    left: 0;
+  }
+
+  .specifications__echolook {
+
+    img {
+      left: -285px;
+    }
+  }
+}
+
+
+/*
+ * Items
+ */
+
+.specifications__itemOne {
+  top: 100px;
+}
+.specifications__itemTwo {
+  top: 260px;
+}
+.specifications__itemThree {
+  top: 362px;
+}
+.specificationsTwo {
+
+  .specifications__itemOne {
+    top: 12px;
+  }
+  .specifications__itemTwo {
+    top: 132px;
+  }
+  .specifications__itemThree {
+    top: 282px;
+  }
+}
+/*
+ * Specifications Large part
+ */
+
+.specifications.specificationsLarge {
+
+  .specifications__itemOne {
+    top: 46.5%;
+  }
+  .specifications__itemTwo {
+    top: 72%;
+  }
+  .specifications__itemThree {
+    top: 14.2%;
+  }
+  .specifications__itemFour {
+    top: 47.5%;
+  }
+  .specifications__itemFive {
+    top: 77.9%;
+  }
+  .specifications__itemSix {
+    top: 102.1%;
+  }
+}
