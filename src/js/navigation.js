@@ -24,6 +24,19 @@ var scroll = new SmoothScroll();
 
 /*
  * NAVIGATION
+ * smoothscroll Discover
+ * state : done
+ */
+document.getElementById('discoverButton').addEventListener('click', (e) => {
+  e.preventDefault();
+  if (window.matchMedia("(min-width: 765px)").matches)
+    scroll.animateScroll( 1000 )
+  else
+    scroll.animateScroll( 700 )
+})
+
+/*
+ * NAVIGATION
  * Waypoint
  * state : done
  */
@@ -44,12 +57,6 @@ for(let i = 0; i < nav_items.length; i++) {
     }
   })
 }
-
-
-
-
-
-
 
 /*
  * NAVIGATION

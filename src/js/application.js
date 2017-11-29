@@ -2,7 +2,6 @@
 
 var carousel = document.getElementById('application__carousel');
 var slides = document.getElementsByClassName('carousel__slide');
-var speed = 2100; // 1s = 1400
 
 function carouselHide(num) {
   indicators[num].setAttribute('data-state', '');
