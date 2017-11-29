@@ -1,2 +1,4 @@
-import './useWaypoints';
-import './accueil';
+import './navigation'
+import './application'
+import './video360'
+import './capture'

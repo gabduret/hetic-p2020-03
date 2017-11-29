@@ -1,0 +1,32 @@
+.gallery {  
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  
+  @media(min-width: $small) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  & > * {
+    width: 100%;
+    
+    @media(min-width: $small) {
+      width: 50%;
+    }
+  }
+}
+  
+.gallery__videos {
+  display: flex;
+}
+
+.gallery__images {
+  display: flex;
+
+  &:nth-of-type(2), &:nth-of-type(3){
+    margin-top: -1px;
+  }
+}
+

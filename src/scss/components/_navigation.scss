@@ -1,0 +1,75 @@
+/*
+ * Navigation
+ */
+
+ .navigation {
+  position: fixed;
+  display: none;
+  top: 50%;
+  right: 20px;
+  color: $white;
+  z-index: 100;
+  cursor: pointer;
+  font-weight: 700;
+
+  &>div {
+    margin: 10px;
+    padding: 13px 13px;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+
+    &:hover .navigation__infos {
+      transform: translateX(-60px);
+      opacity: 1;
+    }
+
+    &:hover .navigation__points:after{
+      opacity: 1;
+      border-color: $white;
+    }
+  }
+
+  @include medium {
+    display: block;
+  }
+}
+
+.navigation__points {
+  width: $points-size-px;
+  height: $points-size-px;
+  border-radius: 50%;
+  background: $main-color;  
+  transition: all 0.3s ease-in-out;
+
+  &:after {
+    content: "";
+    left: $points-size-px - 4;
+    top: $points-size-px - 4;
+    width: $points-size-px + 10;
+    height: $points-size-px + 10;
+    z-index: -1;
+    position: absolute;
+    opacity: 0;
+    border: 1px solid $main-color;
+    border-radius: 50%;
+  }
+}
+.navigation__points:after {
+  transition: all 0.3s ease;
+}
+.navigation__points--active .navigation__points:after{
+  opacity: 1;
+}
+
+.navigation__infos {
+  right: 0px;
+  height: 22px;
+  width: 120px;
+  opacity: 0;
+  position: absolute;
+  transform: translateX(-20px);
+  transition: all 0.25s ease-in-out;
+  transition-delay: 0.1s;
+  will-change:transform, opacity;
+}

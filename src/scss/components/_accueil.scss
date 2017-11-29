@@ -1,359 +1,184 @@
-body,
-html {
-    margin: 0;
-    padding: 0;
-    background-color: $black;
-}
-
-
-/*-- MOBILE queries --*/
-
-
-/*---------------------*/
-
-
-/*--- Normal screen ---*/
-
-
-/* ACCUEIL */
-
-@mixin medium {
-    @media (min-width: #{$medium}) {
-        @content;
-    }
-}
-
-@mixin large {
-    @media (min-width: #{$large}) {
-        @content;
-    }
-}
-
+/*
+ *
+ * Accueil Part
+ *
+ */
 .accueil {
+  position: relative;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 100px;
+  
+  @include medium {
+    justify-content: center;
+  }
+
+  @include large {
+    justify-content: space-around;
+  }
+}
+
+/* 
+ * Accueil left content
+ */
+.accueil__leftContent{
+  display: inline-block;
+  position: relative;
+  width: 65%;
+  padding-left: 7%;
+
+  @include medium {
+    width: 50%;
+  }
+}
+
+/* 
+ * Accueil title
+ */
+.accueil__leftContenttitre {
+  color: $white;
+  font-weight: 700;
+  font-size: $title-2;
+  text-transform: uppercase;
+  margin: $margin-top-4 0 0 0;
+  
+  @include medium {
+      font-size: $title-2;
+      margin: $margin-top-1 0 0 0;
+  }
+  
+  @include large {
+      font-size: $title-1;
+      margin: $margin-top-1 0 0 0;
+  }
+}
+
+/*
+ * Accueil sous-titre
+ */
+.accueil__leftContentsousTitre {
+  color: $main-color;
+  width: 95%;
+  font-size: $subtitle-2;
+  line-height: $line-height-sous-titre-mobile;
+  margin: $margin-top-6 0 0 0;
+  
+  @include medium {
+    width: 90%;
+  }
+  
+  @include large {
+    line-height: $line-height-sous-titre-desktop;
+    width: 85%;
+  }
+}
+
+/*
+ * Accueil text
+ */
+.accueil__leftContenttexte {
+  color: $white;
+  font-size: $text-3;
+  line-height: $line-height-text;
+  margin: $margin-top-6 0 0 0;
+  
+  @include medium {
+    font-size: $text-3;
+    width: 90%;
+  }
+  
+  @include large {
+    font-size: $text-2;
+    width: 85%;
+  }
+}
+
+.accueil__rightContent {
+  width: 35%;
+  margin: $margin-top-2 0 0 0;
+  overflow: hidden;
+  text-align: right;
+  
+  img {
+    width: 70%;
+    z-index: 0;
+    transform: rotate(15deg);
+    -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+    
     @include medium {
-        margin: 30px 30px 100px 30px;
-        .accueil__titre {
-            font-family: $font-1;
-            color: $white;
-            font-size: $title-1;
-            text-transform: uppercase;
-            width: 85%;
-            margin-top: 60px;
-        }
-        .accueil__sous-titre {
-            font-family: $font-1;
-            color: $main-color;
-            width: 60%;
-            font-size: $subtitle-2;
-            margin: 15px 0;
-        }
-        .accueil__texte {
-            font-family: $font-1;
-            color: $white;
-            font-size: $text-3;
-            width: 55%;
-        }
+      width: 200px;
     }
-    @include large {
-        margin: 30px 30px 100px 30px;
-        .accueil__titre {
-            font-family: $font-1;
-            color: $white;
-            font-size: $title-1;
-            text-transform: uppercase;
-            width: 85%;
-            margin-top: 60px;
-        }
-        .accueil__sous-titre {
-            font-family: $font-1;
-            color: $main-color;
-            width: 60%;
-            font-size: $subtitle-2;
-            margin: 15px 0;
-        }
-        .accueil__texte {
-            font-family: $font-1;
-            color: $white;
-            font-size: $text-3;
-            width: 55%;
-        }
-    }
+    
+    // @include large {
+    //   width: 250px;
+    // }
+  }
+
+  @include medium {
+    width: 20%;
+    overflow: inherit;
+    text-align: left;
+    margin: $margin-top-2 0 0 0;
+  }
 }
 
 
-/* SCROLL BOUTON */
 
-.scroll {
-    @include medium {
-        text-align: center;
-        margin-bottom: 80px;
-    }
-    .scroll__text {
-        font-family: $font-1;
-        text-transform: uppercase;
-        color: $main-color;
-        font-size: $text-3;
-    }
-    /* scroll arrow */
-    .demo a {
-        position: absolute;
-        left: 50%;
-        z-index: 2;
-        display: inline-block;
-        -webkit-transform: translate(0, -50%);
-        transform: translate(0, -50%);
-        color: #fff;
-        font: normal 400 20px/1 'Josefin Sans', sans-serif;
-        letter-spacing: .1em;
-        text-decoration: none;
-        transition: opacity .3s;
-         :hover {
-            opacity: .5;
-        }
-    }
-    #scroll-arrow a {
-        padding-top: 60px;
-    }
-    #scroll-arrow a span {
-        position: absolute;
-        width: 10px;
-        height: 10px;
-        top: 30px;
-        border-left: 1px solid #fff;
-        border-bottom: 1px solid #fff;
-        -webkit-transform: rotate(-45deg);
-        transform: rotate(-45deg);
-        -webkit-animation: down 2s infinite;
-        animation: down 2s infinite;
-        box-sizing: border-box;
-    }
-    @-webkit-keyframes down {
-        0% {
-            -webkit-transform: rotate(-45deg) translate(0, 0);
-        }
-        20% {
-            -webkit-transform: rotate(-45deg) translate(-10px, 10px);
-        }
-        40% {
-            -webkit-transform: rotate(-45deg) translate(0, 0);
-        }
-    }
-    @keyframes down {
-        0% {
-            transform: rotate(-45deg) translate(0, 0);
-        }
-        20% {
-            transform: rotate(-45deg) translate(-10px, 10px);
-        }
-        40% {
-            transform: rotate(-45deg) translate(0, 0);
-        }
-    }
+/*
+ * Discover button
+ */
+.discover__scroll {
+  position: absolute;
+  width: 100%;
+  bottom: 10%;
 }
 
+.discover__scroll__button {
+  position: relative;
+  display: flex;
+  width: 100px;
+  height: 110px;
+  margin: auto;
+  align-items: center;
+  text-decoration: none;
+  flex-direction: row;
+  justify-content: center;
 
-/* ECHO LOOK APP */
-
-.app {
-    @include medium {
-        margin: 30px;
-    }
-    .app__titre {
-        font-family: $font-1;
-        color: $main-color;
-        font-size: $title-2;
-        text-transform: uppercase;
-    }
-    .app__bouton{
-        top: 280px;
-        text-align: center;
-        position: relative;
-        z-index: 1;
-        .app__bouton-text{
-            font-family: $font-1;
-            text-transform: uppercase;
-            color: $main-color;
-            font-size: $text-3;
-        }
-        // .app__bouton-cercle{
-            
-        // }
-        #app__bouton-bouton {
-            position: absolute;
-            top: 65px;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            width: 44px;
-            height: 44px;
-            margin: auto;
-            transition: visibility 0.5s ease 0s;
-            z-index: 200000 !important;
-        }
-        #app__bouton-bouton a {
-            text-decoration: none;
-        }
-        #app__bouton-bouton .bouton-inner {
-            animation: 1s ease-in-out 0s normal none infinite running kmacb-circle-img-anim;
-            background: $main-color;
-            border: 2px solid transparent;
-            border-radius: 100%;
-            height: 20px;
-            left: 12px;
-            position: absolute;
-            top: 12px;
-            transform-origin: 50% 50% 0;
-            width: 20px;
-        }
-        #app__bouton-bouton .bouton-circle {
-            animation: 2.2s ease-in-out 0s normal none infinite running bouton-circle-anim !important;
-            background-color: transparent;
-            border: 2px solid $main-color;
-            border-radius: 100%;
-            height: 100%;
-            opacity: 0.35;
-            position: absolute;
-            width: 100%;
-        }
-        #app__bouton-bouton .bouton-inner{
-            background-color: $main-color;
-        }
-        #app__bouton-bouton .bouton-circle {
-            border-color: $main-color;
-        }
-        @keyframes bouton-circle-anim {
-        0% {
-            opacity: 0.1;
-            transform: rotate(0deg) scale(0.5) skew(1deg);
-        }
-        30% {
-            opacity: 0.5;
-            transform: rotate(0deg) scale(0.7) skew(1deg);
-        }
-        100% {
-            opacity: 0.6;
-            transform: rotate(0deg) scale(1) skew(1deg);
-        }
-        }
-        @keyframes bouton-circle-anim {
-        0% {
-            opacity: 0.1;
-            transform: rotate(0deg) scale(0.5) skew(1deg);
-        }
-        30% {
-            opacity: 0.5;
-            transform: rotate(0deg) scale(0.7) skew(1deg);
-        }
-        100% {
-            opacity: 0.1;
-            transform: rotate(0deg) scale(1) skew(1deg);
-        }
-        }
-        @keyframes kmacb-circle-img-anim {
-        0% {
-            transform: rotate(0deg) scale(1) skew(1deg);
-        }
-        10% {
-            transform: rotate(-25deg) scale(1) skew(1deg);
-        }
-        20% {
-            transform: rotate(25deg) scale(1) skew(1deg);
-        }
-        30% {
-            transform: rotate(-25deg) scale(1) skew(1deg);
-        }
-        40% {
-            transform: rotate(25deg) scale(1) skew(1deg);
-        }
-        50% {
-            transform: rotate(0deg) scale(1) skew(1deg);
-        }
-        100% {
-            transform: rotate(0deg) scale(1) skew(1deg);
-        }
-        }
-        @keyframes kmacb-circle-img-anim {
-        0% {
-            transform: rotate(0deg) scale(1) skew(1deg);
-        }
-        10% {
-            transform: rotate(-25deg) scale(1) skew(1deg);
-        }
-        20% {
-            transform: rotate(25deg) scale(1) skew(1deg);
-        }
-        30% {
-            transform: rotate(-25deg) scale(1) skew(1deg);
-        }
-        40% {
-            transform: rotate(25deg) scale(1) skew(1deg);
-        }
-        50% {
-            transform: rotate(0deg) scale(1) skew(1deg);
-        }
-        100% {
-            transform: rotate(0deg) scale(1) skew(1deg);
-        }
-        }
-    }
-    .app__outer-container {
-        position: relative;
-        overflow: hidden;
-        margin: 25px auto 80px auto;
-        border-radius: $border-radius;
-        border: 2px solid white;
-        width: 178px;
-        height: 314px;
-        z-index: 0;
-        .app__inner-container {
-            position: absolute;
-            left: 0;
-            overflow-x: hidden;
-            overflow-y: scroll;
-        }
-        .app__inner-container img {
-            width: auto;
-            height: 314px;
-        }
-    }
+  &:hover .discover__scroll__buttonDecoration {
+    transform: translateY(0px);
+  }
 }
 
+.discover__scroll__buttonDecoration {
+  position: absolute;
+  width: 70px;
+  height: 40px;
+  z-index: 1;
+  border: 2px solid $white;
+  transition: transform 0.2s ease-in-out;
 
-/* VIDEO 360 */
+  &:nth-of-type(1){
+    top: 0%;
+    border-bottom: none;
+    transform: translateY(-10px);
+  }
 
-.video360 {
-    @include medium {
-        margin: 30px;
-    }
-    .video360__titre {
-        font-family: $font-1;
-        color: $main-color;
-        font-size: $title-2;
-        text-transform: uppercase;
-    }
-    .video360__texte {
-        font-family: $font-1;
-        color: $white;
-        font-size: $text-3;
-        margin: 25px 0;
-    }
-    .video360__outer-container {
-        position: relative;
-        overflow: hidden;
-        margin: 25px auto 80px auto;
-        border-radius: $border-radius;
-        border: 2px solid white;
-        width: 178px;
-        height: 314px;
-        .video360__inner-container {
-            position: absolute;
-            left: 0;
-            overflow-x: hidden;
-            overflow-y: scroll;
-        }
-        .video360__inner-container img {
-            width: auto;
-            height: 314px;
-        }
-    }
+  &:nth-of-type(2){
+    bottom: 0%;
+    border-top: none;
+    transform: translateY(10px);
+  }
+}
+
+.discover__scroll__buttonText {
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+  text-align: center;
+  color: #156DF2;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: "Ember";
+  text-transform: uppercase;
 }

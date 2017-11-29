@@ -1,73 +1,24 @@
-include ../partials/header.pug
-
-
-
 <!-- ACCUEIL -->
 
-    <section class="accueil">
-        <div class="accueil__titre">
-            <p>echo look</p>
+<section id="discover" class="accueil">
+    <div class="accueil__leftContent">
+        <div class="accueil__leftContenttitre">
+            <h1>echo look <p class="accueil__leftContentsousTitre">Aime ton look tous les jours</p></h1>
         </div>
-        <div class="accueil__sous-titre">
-            <p>Aime ton look tous les jours</p>
+        <div class="accueil__leftContenttexte">
+            <p>Avec Echo Look, vous allez pouvoir controler votre style chaque matin.
+                <br> Il vous aidera dans votre choix avec une tenue adapté au temps extérieur mais aussi à la tendance du moment pour être toujours plus au top.</p>
         </div>
-        <div class="accueil__texte">
-            <p>Avec Echo Look, vous allez pouvoir controler votre style chaque matin. Il vous aidera dans votre choix avec une tenue adapté
-            au temps extérieur mais aussi à la tendance du moment pour être toujours plus au top.</p>
-        </div>
-        <img class="accueil__image" src="" alt="">
-    </section>
+    </div>
+    <div class="accueil__rightContent">
+        <img src="../img/large-echo_look_background.png" srcset="../img/accueil/small-echo_look_background.png 130w, ../img/large-echo_look_background.png 256w" sizes="(min-width: 765px) 250px, 145px" alt="echo look background image">
+    </div>
 
-    <!-- SCROLL BOUTON -->
-
-    <section class="scroll">
-        <div class="scroll__text">
-            <p>decouvrir</p>
-        </div>
-        <!-- arrow -->
-        <section id="scroll-arrow" class="demo">
-            <a href="#scroll-destination">
-                <span></span>
-            </a>
-        </section>
-    </section>
-
-
-    <!-- ECHO LOOK APP -->
-
-    <section class="app" id="scroll-destination">
-        <div class="app__titre">
-            <p>testez style check maintenant en cliquant sur "touchez-moi"</p>
-        </div>
-        <div class="app__bouton">
-            <div class="app__bouton-text"><p>touchez moi</p></div>
-            <div id="app__bouton-bouton">
-                <div class="bouton-circle"></div>
-                <div class="bouton-inner"></div>
-            </div>
-        </div>
-        <div class="app__outer-container">
-            <div class="app__inner-container">
-                <img src="./img/accueil/gab.png" alt="">
-            </div>
-        </div>
-    </section>
-
-    <!-- VIDEO 360 -->
-
-    <section class="video360">
-        <div class="video360__titre">
-            <p>video 360</p>
-        </div>
-        <div class="video360__texte">
-            <p>Avec Echo Look, vous allez pouvoir controler votre style chaque matin. Il vous aidera dans votre choix avec une tenue adapté
-            au temps extérieur mais aussi à la tendance du moment pour être toujours plus au top.</p>
-        </div>
-        <div class="video360__outer-container">
-            <div class="video360__inner-container">
-                <img src="./img/accueil/hallelujah.gif" alt="">
-            </div>
-        </div>
-    </section>
-
-include ../partials/footer.pug
+    <div class="discover__scroll">
+        <a id="discoverButton" class="discover__scroll__button" href="#">
+            <div class="discover__scroll__buttonDecoration"></div>
+            <p class="discover__scroll__buttonText">Découvrir</p>
+            <div class="discover__scroll__buttonDecoration"></div>
+        </a>
+    </div>
+</section>

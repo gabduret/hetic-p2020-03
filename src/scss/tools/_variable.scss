@@ -6,13 +6,21 @@ $title-2: 48px;
 
 $subtitle-1: 24px;
 $subtitle-2: 22px;
+$subtitle-3: 20px;
 
 $text-1: 18px;
 $text-2: 16px;
 $text-3: 14px;
+$text-4: 12px;
+$text-5: 10px;
 
 $font-1: 'Avenir';
 $font-2: 'Ember';
+
+// Line heights
+$line-height-sous-titre-mobile: 30px;
+$line-height-sous-titre-desktop: 70px;
+$line-height-text: 24px;
 
 // Colors
 $white: #ffffff;
@@ -21,7 +29,7 @@ $black: #111111;
 $black-2: #202020;
 
 $main-color: #156DF2;
-$main-color-hover: #6bbde4;
+$main-color-hover: #074db8;
 
 // Marging-top et padding
 $margin-top-1: 240px; //élément le plus bas section/élément le plus haut d'une autre 
@@ -48,6 +56,9 @@ $box-shadow-action-hover: 0px 0px 30px 0px rgba(0, 0, 0, 0.2);
 // Border radius
 $border-radius: 8px;
 
+// Background Lines size
+$bkg-rec-size: 450px;
+
 // Transition
 $transition: all 0.3s ease-in-out;
 
@@ -60,5 +71,24 @@ $zindex-2: 5;
 $zindex-3: 10;
 
 // Breakpoints
+$small: 500px;
 $medium: 765px;
 $large: 1200px;
+
+// Navigation
+$points-size-px: 12px;
+$points-size: 12;
+
+
+// Mixins
+@mixin medium {
+  @media (min-width: #{$medium}) {
+      @content;
+  }
+}
+
+@mixin large {
+  @media (min-width: #{$large}) {
+      @content;
+  }
+}

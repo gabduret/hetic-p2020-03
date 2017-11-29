@@ -1,0 +1,114 @@
+/*
+ * Purchase part
+ */
+ .purchase {
+  color: $white;
+  font-family: $font-1;
+  margin-top: $margin-top-6;
+  margin-bottom: $margin-top-4;
+  padding: 100px 0 50px 0;
+  
+  @media(min-width: $medium) {
+    display: flex;
+    padding: 150px 0;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.purchase__visuel {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+
+  @include medium {
+    margin-bottom: 0;
+  }
+}
+
+.purchase__content {
+  margin-left: $margin-top-5;
+  margin-right: $margin-left-5;
+  
+  @include medium {
+    width: 40%;
+  }
+}
+
+/*
+ * Purchase text content
+ */
+.purchase__content__title2 {
+  line-height: 24px;
+  font-size: $subtitle-3;
+  font-weight: 700;
+}
+
+.purchase__content__price {
+  margin-top: $margin-top-6;
+  font-size: $subtitle-3;
+  font-weight: 700;
+  color: $main-color;
+}
+
+.purchase__content__invitation {
+  margin-top: $margin-left-6;
+  font-size: $text-2;
+} 
+
+.purchase__content__copyright {
+  margin-top: $margin-left-7;
+  font-size: $text-3;
+  line-height: 14px;
+}
+
+/*
+ * Purchase button
+ */
+.purchase__content__button {
+  position: relative;
+  display: flex;
+  width: 187px;
+  height: 45px;
+  margin-top: $margin-top-5;
+  align-items: center;
+  text-decoration: none;
+  flex-direction: row;
+  justify-content: flex-start;
+
+  &:hover .purchase__content__buttonDecoration {
+    transform: translateX(0px);
+  }
+}
+
+.purchase__content__buttonDecoration {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  z-index: 1;
+  border: 2px solid $white;
+  transition: transform 0.2s ease-in-out;
+
+  &:nth-of-type(1){
+    left: 0%;
+    border-right: none;
+    transform: translateX(-10px);
+  }
+
+  &:nth-of-type(2){
+    right: 0%;
+    border-left: none;
+    transform: translateX(10px);    
+  }
+}
+
+.purchase__content__buttonTexte {
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+  text-align: center;
+  color: $main-color;
+  font-size: $text-3;
+  font-weight: 700;
+  font-family: $font-2;
+}

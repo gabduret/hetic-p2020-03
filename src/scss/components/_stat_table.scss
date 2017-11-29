@@ -1,43 +1,89 @@
 table {
   color: $white;
   font-size: $text-2;
-  margin-top: $margin-top-1;
+  font-family: $font-1;
+  font-weight: 400;
+  
   margin-left: $margin-left-1;
   margin-right: $margin-left-1;
+  margin-bottom: $margin-top-3;
+  margin-top: $margin-top-3;
   
   //pour toutes les lignes
   tr {
     border-bottom: 1px solid $white;
     padding-top: $margin-top-5;
     
-    td:nth-of-type(1) {
-      font-size: $subtitle-1;
-      color: $main-color;
-      //rajouter la graisse ici
-    }
-  }
+    td{
+      padding-top: $margin-top-6;
+      padding-bottom: $margin-top-6;
+      
+      &:nth-of-type(1) {
+        font-size: $text-1;
+        color: $main-color;
+        padding-right: $margin-left-7;
+        font-weight: 600;
+        
+        @media(min-width: $medium) {
+          font-size: $subtitle-3;
+          padding-right: $margin-left-5;
+          padding-top: $margin-top-5;
+          padding-bottom: $margin-top-5;
+        }
+      }
+    }    
+  }  
   
-  //la première ligne à un css spécifique
-  tr:nth-of-type(1) {
-    
-    td:nth-of-type(2) {
-      
-      ul {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
-        align-items: flex-start;
-      
-        li:nth-of-type(1) {
-          font-size: $subtitle-2;
+  @media(min-width: $small) {
+    font-size: $text-2;
+  }
+  @include medium {
+    margin: 150px 15%;    
+  }
+  @include large {
+    margin: 150px 20%;    
+  }
+}
+
+.table__taille__contenu {
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+
+    li {
+      margin-top: $margin-top-6;
+      font-size: $text-3;
+
+      &:nth-of-type(1) {
+        margin-right: $margin-left-7;
+        font-weight: 600;
+        font-weight: 700;
+
+        @media(min-width: $medium) {
+          font-size: $text-1;
           width: 20%;
         }
-        
-        li:nth-of-type(2){
+      }
+
+      &:nth-of-type(2) {
+        font-size: $text-5;
+
+        @media(min-width: $medium) {
+          font-size: $text-1;
           width: 80%;
         }
       }
+      
+      ul:nth-of-type(3){
+        margin-bottom: $margin-top-5;
+      }
     }
-    
   }
+}
+
+.table__garantie{
+  border-bottom: none;
 }
