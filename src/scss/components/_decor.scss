@@ -24,10 +24,11 @@
   transform: translateY(-800px);
   z-index: -1;
   
-  @include medium {
-    transform: translateY(0px);
+  @include medium {
+    transform: translateY(-300px);
   }
 }
+
 .background__container {
   position: relative;
   width: 100%;

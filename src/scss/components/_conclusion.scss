@@ -6,25 +6,32 @@
   font-family: $font-1;
   margin-top: $margin-top-6;
   margin-bottom: $margin-top-4;
+  padding: 100px 0 50px 0;
   
   @media(min-width: $medium) {
     display: flex;
+    padding: 150px 0;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
   }
 }
 .purchase__visuel {
   display: flex;
   justify-content: center;
+  margin-bottom: 30px;
+
+  @include medium {
+    margin-bottom: 0;
+  }
 }
 
 .purchase__content {
   margin-left: $margin-top-5;
   margin-right: $margin-left-5;
   
-  @media(min-width: 700px) {
-    margin-right: $margin-left-3;
+  @include medium {
+    width: 40%;
   }
 }
 
@@ -32,33 +39,33 @@
  * Purchase text content
  */
 .purchase__content__title2 {
-  line-height: 20px;
-  font-size: $text-2;
+  line-height: 24px;
+  font-size: $subtitle-3;
   font-weight: 700;
 }
 
 .purchase__content__price {
   margin-top: $margin-top-6;
-  font-size: $text-2;
+  font-size: $subtitle-3;
   font-weight: 700;
   color: $main-color;
 }
 
 .purchase__content__invitation {
   margin-top: $margin-left-6;
-  font-size: $text-3;
+  font-size: $text-2;
 } 
 
 .purchase__content__copyright {
   margin-top: $margin-left-7;
-  font-size: $text-4;
+  font-size: $text-3;
   line-height: 14px;
 }
 
 /*
  * Purchase button
  */
-.purchase__content__bouton {
+.purchase__content__button {
   position: relative;
   display: flex;
   width: 187px;
@@ -68,28 +75,34 @@
   text-decoration: none;
   flex-direction: row;
   justify-content: flex-start;
-  cursor: crosshair;
+
+  &:hover .purchase__content__buttonDecoration {
+    transform: translateX(0px);
+  }
 }
 
-.purchase__content__boutonDecoration {
+.purchase__content__buttonDecoration {
   position: absolute;
   width: 50px;
-  height: 40px;
+  height: 50px;
   z-index: 1;
   border: 2px solid $white;
+  transition: transform 0.2s ease-in-out;
 
   &:nth-of-type(1){
     left: 0%;
     border-right: none;
+    transform: translateX(-10px);
   }
 
   &:nth-of-type(2){
     right: 0%;
     border-left: none;
+    transform: translateX(10px);    
   }
 }
 
-.purchase__content__boutonTexte {
+.purchase__content__buttonTexte {
   position: absolute;
   width: 100%;
   z-index: 2;

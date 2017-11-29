@@ -144,7 +144,6 @@
   text-decoration: none;
   flex-direction: row;
   justify-content: center;
-  cursor: crosshair;
 
   &:hover .discover__scroll__buttonDecoration {
     transform: translateY(0px);
@@ -156,7 +155,7 @@
   width: 70px;
   height: 40px;
   z-index: 1;
-  border: 2px solid #fff;
+  border: 2px solid $white;
   transition: transform 0.2s ease-in-out;
 
   &:nth-of-type(1){
