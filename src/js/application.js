@@ -1,6 +1,6 @@
 // app carousel v-2
 
-var carousel = document.getElementById('application__carousel');
+var carousel = document.getElementById('application__carousel__active');
 var slides = document.getElementsByClassName('carousel__slide');
 
 function carouselHide(num) {
@@ -79,18 +79,18 @@ document.querySelectorAll('.carousel__slide').forEach(
 
 // Pull out class from deactivated slide
 
-document.querySelectorAll('.carousel__indicator').forEach(
-  function(turnOff) {
-    var indicator = turnOff.querySelector('.indicator__label');
-    
-    if(indicator){
-      indicator.addEventListener('click', function() {
-        document.querySelectorAll('.carousel__slide').forEach(function(slide) {
-          slide.querySelector('.rightContent__bluredImage').classList.remove('rightContent__bluredImage--on');
-          slide.querySelector('.leftContent__text').classList.remove('leftContent__text--on');
-          slide.querySelector('.rightContent__background').classList.remove('rightContent__background--on');
-        });
-      });
-    }
-  }
-);
+//document.querySelectorAll('.carousel__indicator').forEach(
+//  function(turnOff) {
+//    var indicator = turnOff.querySelector('.indicator__label');
+//    
+//    if(indicator){
+//      indicator.addEventListener('click', function() {
+//    document.querySelectorAll('.carousel__slide').forEach(function(slide) {
+//          slide.querySelector('.rightContent__bluredImage').classList.remove('rightContent__bluredImage--on');
+//          slide.querySelector('.leftContent__text').classList.remove('leftContent__text--on');
+//          slide.querySelector('.rightContent__background').classList.remove('rightContent__background--on');
+//        });
+//      });
+//    }
+//  }
+//);
