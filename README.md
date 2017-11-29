@@ -32,11 +32,11 @@ yarn install
 
 ## Other
 ### Credits
-* [Gabriel Duret](https://github.com/gabduret)
-* [Marie-Elise Haddad](https://github.com/Marie-Elise)
-* [Quang Tuyen Dinh](https://github.com/Quang-Tuyen-DINH)
-* [Bérangère Martin](https://github.com/BerangereHetic)
-* [Kenrig Dalle](https://github.com/DalleKenrig)
+* [Gabriel Duret](https://www.gabrielduret.fr) - Web developer / UX/UI designer
+* [Marie-Elise Haddad](http://www.marie-elisehaddad.com) - Digital project manager
+* [Quang Tuyen Dinh](https://github.com/Quang-Tuyen-DINH) - Web developer
+* [Bérangère Martin](https://github.com/BerangereHetic) - Web developer
+* [Kenrig Dalle](https://github.com/DalleKenrig) - UX/UI designer
 
 ### Licence
 This repository is under MIT Licence.
