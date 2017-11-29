@@ -1,22 +1,97 @@
+/*
+ * Background Part
+ */
+ .backgroundSmall {
+  display: block;
+   
+  @include medium {
+    display: none;
+  }
+}
+.backgroundLarge {
+  display: none;
 
-/*****************/
+  @include medium {
+    display: block;
+  }
+}
 
 
-/* DECORATION */
+.background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: translateY(-800px);
+  z-index: -1;
+  
+  @include medium {
+    transform: translateY(-300px);
+  }
+}
+
+.background__container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.background__rec {
+  position: absolute;
+  width: 100%;
+  height: $bkg-rec-size;
+  transform: skewY(-45deg);
+  transform-origin: 0 50%;
+  background: $black-2;
+  z-index: 0;
+}
+
+.background__Square {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  float: right;
+}
+
+.background__SquareItem {
+  position: absolute;
+  top: $bkg-rec-size / 2 + 10;
+  right: - $bkg-rec-size / 1.2;
+  width: $bkg-rec-size;
+  height: $bkg-rec-size;
+  transform-origin: 50% 50%;
+  transform: rotate(45deg);
+  background: $main-color;
+
+  @include medium {
+    top: $bkg-rec-size / 2;
+    right: - $bkg-rec-size / 2;
+  }
+}
 
 
-/*****************/
+/*
+ * Background position
+ */
+.background__recOne {
+  top: 0;
+}
+.background__recTwo {
+  top: $bkg-rec-size;
+  transform: skewY(45deg);
+}
+.background__recThree {
+  top: - $bkg-rec-size * 3;
+}
 
-.decor{
-  .decor__1{
-    position: absolute;
-    top: 1300px;
-    left: 0;
-    width: 100%;
-    height: 430px;
-    transform: skewY(-40deg);
-    background: $white;
-    opacity: 0.1;
-    z-index: 0;
+
+.backgroundLarge {
+
+  .background__recOne {
+    top: 0;
+  }
+  .background__recTwo {
+    top: $bkg-rec-size;
+    transform: skewY(45deg);
   }
 }

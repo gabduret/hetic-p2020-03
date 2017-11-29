@@ -1,7 +1,7 @@
 .specifications .specificationsLarge {
   display: none;
   margin-top: 40px;
-  margin-bottom: 200px;
+  margin-bottom: 250px;
   padding-top: 100px;
 
   @include medium {
@@ -48,11 +48,16 @@
 .contentItem__title {
   font-size: $text-2;
   line-height: 19px;
+  font-weight: 700;
 }
 .contentItem__text {
   font-weight: 400;
   font-size: $text-3;
   line-height: 16px;
+
+  @include medium {
+    font-size: $text-2;
+  }
 }
 
 .specifications__echolook {
