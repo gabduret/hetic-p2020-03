@@ -46,7 +46,6 @@ for(let i = 0; i < nav_items.length; i++) {
 
     if(target) {
         const targetElement = document.getElementById(target)
-        // location.href = "#" + anchors[i];
         scroll.animateScroll( targetElement )
     }
     else {
