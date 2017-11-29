@@ -9,9 +9,9 @@
 .video360 {
   display: flex;
   flex-direction: column-reverse;
-  justify-content: flex-start;
-  align-items: center;
   margin-top: $margin-top-2;
+  align-items: center;
+  justify-content: flex-start;
   
   @include medium {
     flex-direction: row;

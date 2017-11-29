@@ -4,16 +4,18 @@
  *
  */
 .accueil {
-  display: flex;
   position: relative;
-  margin: 30px 0px 0px 30px;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 100px;
   
   @include medium {
-      margin-left: $margin-left-4;
+    justify-content: center;
   }
-  
+
   @include large {
-      margin-left: $margin-left-3;
+    justify-content: space-around;
   }
 }
 
@@ -23,14 +25,11 @@
 .accueil__leftContent{
   display: inline-block;
   position: relative;
-  width: 60%;
-  
+  width: 65%;
+  padding-left: 7%;
+
   @include medium {
-    width: 55%;
-  }
-  
-  @include large{
-    width: 55%;
+    width: 50%;
   }
 }
 
@@ -41,7 +40,6 @@
   color: $white;
   font-weight: 700;
   font-size: $title-2;
-  z-index: 5;
   text-transform: uppercase;
   margin: $margin-top-4 0 0 0;
   
@@ -64,7 +62,6 @@
   width: 95%;
   font-size: $subtitle-2;
   line-height: $line-height-sous-titre-mobile;
-  z-index: 5;
   margin: $margin-top-6 0 0 0;
   
   @include medium {
@@ -84,9 +81,7 @@
   color: $white;
   font-size: $text-3;
   line-height: $line-height-text;
-  width: 80%;
   margin: $margin-top-6 0 0 0;
-  z-index: 5;
   
   @include medium {
     font-size: $text-3;
@@ -100,165 +95,45 @@
 }
 
 .accueil__rightContent {
-  position: relative;
-  float: right;
-  width: 40%;
+  width: 35%;
   margin: $margin-top-2 0 0 0;
-  z-index: 5;
+  overflow: hidden;
+  text-align: right;
   
-  @include medium {
-    width: 40%;
-    margin: $margin-top-2 0 0 0;
-    z-index: 5;
-  }
-  
-  @include large {
-    width: 45%;
-    margin: $margin-top-2 0 0 0;
-  }
-}
-
-/*
- * App image gradient
- */
-.accueil__rightContent::after {
-  margin: 220px 0 0 -58px;
-  display: inline-block;
-  left: 0;
-  height: 190px;
-  width: 135px;
-  transform: rotate(15deg);
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, #111111 50%);
-  content: '';
-  z-index: 0;
-  
-  @include medium {
-    margin: 210px 0 0 -70px;
-    height: 330px;
+  img {
     width: 70%;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, #111111 50%);
+    z-index: 0;
+    transform: rotate(15deg);
+    -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+    
+    @include medium {
+      width: 200px;
+    }
+    
+    // @include large {
+    //   width: 250px;
+    // }
   }
-  
-  @include large {
-    margin: 300px 0 0 -130px;
-    height: 380px;
-    width: 60%;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, #111111 50%);
-  }
-}
 
-.accueil__rightContent img{
-  position: absolute;
-  left: -30px;
-  width: 145px;
-  z-index: 0;
-  transform: rotate(15deg);
-  -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
-  
   @include medium {
-    width: 200px;
-  }
-  
-  @include large {
-    width: 250px;
+    width: 20%;
+    overflow: inherit;
+    text-align: left;
+    margin: $margin-top-2 0 0 0;
   }
 }
 
-
-// /*
-//  *
-//  * Scroll button
-//  *
-//  */
-
-// .scroll {
-//     clear: both;
-//     text-align: center;
-//     margin: 100px 0 0 0;
-//     @include medium {
-//         margin: 200px 0 0 0;
-//     }
-//     @include large {
-//         margin: 400px 0 0 0;
-//     }
-//     .scroll__text {
-//         font-family: $font-2;
-//         font-weight: 700;
-//         text-transform: uppercase;
-//         color: $main-color;
-//         font-size: $text-3;
-//         margin-left: 5px;
-//         @include medium {
-//             font-size: $text-2;
-//         }
-//         @include large {
-//             font-size: $text-2;
-//         }
-//     }
-//     /* scroll arrow */
-//     .demo a {
-//         position: absolute;
-//         z-index: 2;
-//         display: inline-block;
-//         -webkit-transform: translate(0, -50%);
-//         transform: translate(0, -50%);
-//         color: #fff;
-//         font: normal 400 20px/1 'Josefin Sans', sans-serif;
-//         letter-spacing: .1em;
-//         text-decoration: none;
-//         transition: opacity .3s;
-//          :hover {
-//             opacity: 0.5;
-//         }
-//     }
-//     .scrollArrow a {
-//         padding-top: 60px;
-//     }
-
-//     /*
-//      * Arrow Scroll animation
-//      */
-//     .scrollArrow span {
-//         position: absolute;
-//         width: 10px;
-//         height: 10px;
-//         top: 30px;
-//         border-left: 1px solid #fff;
-//         border-bottom: 1px solid #fff;
-//         -webkit-transform: rotate(-45deg);
-//         transform: rotate(-45deg);
-//         -webkit-animation: down 2s infinite;
-//         animation: down 2s infinite;
-//         box-sizing: border-box;
-//     }
-//     @-webkit-keyframes down {
-//         0% {
-//             -webkit-transform: rotate(-45deg) translate(0, 0);
-//         }
-//         20% {
-//             -webkit-transform: rotate(-45deg) translate(-10px, 10px);
-//         }
-//         40% {
-//             -webkit-transform: rotate(-45deg) translate(0, 0);
-//         }
-//     }
-//     @keyframes down {
-//         0% {
-//             transform: rotate(-45deg) translate(0, 0);
-//         }
-//         20% {
-//             transform: rotate(-45deg) translate(-10px, 10px);
-//         }
-//         40% {
-//             transform: rotate(-45deg) translate(0, 0);
-//         }
-//     }
-// }
 
 
 /*
  * Discover button
  */
+.discover__scroll {
+  position: absolute;
+  width: 100%;
+  bottom: 10%;
+}
+
 .discover__scroll__button {
   position: relative;
   display: flex;
