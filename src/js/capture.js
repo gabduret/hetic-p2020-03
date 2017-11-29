@@ -9,6 +9,7 @@ bouton_capture.addEventListener('click', function(event) {
   image_capture.classList.remove('rightContent__innerInactive');
   bouton_capture.style.display = 'none';
   texte_bouton_capture.style.display = 'none';
+  window.navigator.vibrate(200);
 });
 
 flash_capture.addEventListener('animationend', function(event) {
